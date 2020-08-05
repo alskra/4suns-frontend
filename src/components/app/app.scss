@@ -1,0 +1,12 @@
+.app {
+	font-size: (10 / 16) * 1rem;
+	&__body {
+		display: flex;
+		flex-flow: column;
+		min-width: 320px;
+		min-height: 100vh;
+		overflow-x: hidden;
+		background: var(--color-white);
+		font-family: var(--font-family-tt-prosto-sans);
+	}
+}
