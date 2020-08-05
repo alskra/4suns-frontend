@@ -1,5 +1,2 @@
 // stylelint-disable no-empty-source
-@include font-face("../fonts/TTProstoSans/TTProstoSans", "TTProstoSans", 400, normal);
-@include font-face("../fonts/TTProstoSans-Bold/TTProstoSans-Bold", "TTProstoSans", 700, normal);
-@include font-face("../fonts/TTProstoSans-Black/TTProstoSans-Black", "TTProstoSans", 900, normal);
-@include font-face("../fonts/IriskaFree/IriskaFree", "IriskaFree", 400, normal);
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap');

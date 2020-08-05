@@ -2,12 +2,13 @@ extends pug/base
 
 prepend vars
 	-
-		const jsv = 'javascript:void(0)';
 		title = 'Управляющая компания Четыре солнца';
 
 append vars
 	-
+		baseDir = './';
 		html.classList.push('app');
 		body.classList.push('app__body');
+		const jsv = 'javascript:void(0)';
 
 block content

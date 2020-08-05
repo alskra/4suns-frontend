@@ -2,4 +2,7 @@ include ../button/button
 include ../menu/menu
 
 mixin header()
-	+b.HEADER.header(data-controller="header")&attributes(attributes)
+	+b.HEADER.header(data-controller='header')&attributes(attributes)
+		+e.container
+			+e.A.logo(href=`${baseDir}`)
+				+svg('logo').logo-img

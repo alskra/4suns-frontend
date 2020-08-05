@@ -41,3 +41,7 @@
 		display: none !important;
 	}
 }
+
+.container {
+	@include container;
+}

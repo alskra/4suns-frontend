@@ -3,15 +3,12 @@
 :root {
 	--color-black: #000;
 	--color-white: #fff;
-	--color-ebony: #0B0B23;
-	--color-ebony-50: #{rgba(#0B0B23, 0.5)};
-	--color-fun-green: #008713;
-	--color-limeade: #40A200;
-	--color-limeade-2: #3ca100;
-	--color-limeade-3: #329d00;
-	--font-family-tt-prosto-sans: "TTProstoSans", sans-serif;
-	--font-family-iriska-free: "IriskaFree", sans-serif;
-	--container-max-width: 1200px;
+	--color-mine-shaft: #303030;
+	--color-emperor: #545454;
+	--color-flush-orange: #FF8200;
+	--color-tundora: #4A4A4A;
+	--font-family-jost: 'Jost', sans-serif;
+	--container-max-width: 1454px;
 	--gutter: 15px;
 	--gutter-negative: -15px;
 }
@@ -22,8 +19,6 @@ $color-black: #000;
 $color-white: #fff;
 
 // FONTS
-$font-family-tt-prosto-sans: "TTProstoSans", sans-serif;
-$font-family-iriska-free: "IriskaFree", sans-serif;
 
 // EASING TRANSITIONS
 $duration-normal: 0.4s;
@@ -36,7 +31,7 @@ $easing-in: ease-in;
 $screen-sm: 576px;
 $screen-md: 768px;
 $screen-lg: 1025px;
-$screen-xl: 1200px;
+$screen-xl: 1680px;
 
 $screen-xs-max: $screen-sm - 0.02;
 $screen-sm-max: $screen-md - 0.02;
