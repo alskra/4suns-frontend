@@ -36,6 +36,10 @@ $responsive-width-max: 1680px;
 	--color-mine-shaft: #303030;
 	--color-emperor: #545454;
 	--color-flush-orange: #FF8200;
+	--color-flush-orange-1: #{lighten(#FF8200, 20)};
+	--color-flush-orange-2: #{saturate(#FF8200, 20)};
+	--color-flush-orange-3: #{darken(#FF8200, 40%)};
+	--color-mango-tango: #{darken(#FF8200, 5)};
 	--color-tundora: #4A4A4A;
 	--color-alabaster: #F8F8F8;
 
