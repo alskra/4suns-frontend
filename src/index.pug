@@ -13,8 +13,8 @@ append vars
 		meta.viewport = 'width=device-width, initial-scale=1, shrink-to-fit=no';
 
 		const jsv = 'javascript:void(0)';
-		let headerMod = '';
+		let headerTransparent = false;
 
 block content
-	+header()(class=headerMod)
+	+header()(data-header-transparent=headerTransparent.toString())
 	block main

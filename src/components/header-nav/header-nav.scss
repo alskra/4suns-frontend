@@ -10,7 +10,7 @@
 		#{$r}__cell {
 			margin: 0 0 0 16px;
 
-			& + & {
+			& + #{$r}__cell {
 				border-top: 1px solid #D8D8D8;
 			}
 		}

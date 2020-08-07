@@ -52,6 +52,7 @@
 		@media (max-width: $screen-md-max) {
 			width: 24px;
 			height: 24px;
+			color: var(--color-flush-orange);
 
 			#{$r}__icon {
 				width: 100%;

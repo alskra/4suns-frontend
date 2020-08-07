@@ -4,8 +4,19 @@ include ../button/button
 mixin header()
 	+b.HEADER.header(
 		data-controller='header'
+		data-header-menu-mobile-opened='false'
+		data-action='resize@window->header#checkViewport'
 	)&attributes(attributes)
 		+e.container
+			+e.BUTTON.button-menu(
+				type='button'
+				data-target='header.buttonMenu'
+				data-action='header#toggleMenuMobile'
+			)
+				+e.SPAN.button-menu-line
+				+e.SPAN.button-menu-line
+				+e.SPAN.button-menu-line
+
 			+e.A.logo(href=baseDir)
 				+svg('logo').logo-img
 
@@ -19,3 +30,6 @@ mixin header()
 
 			+button('a', 'user').--login.__button-login(href=jsv)
 				| Личный кабинет
+
+		+e.menu-mobile(hidden data-target='header.menuMobile')
+			+header-nav(true).__nav-mobile
