@@ -15,16 +15,18 @@ $easing-out: ease-out;
 $easing-in: ease-in;
 
 // BREAKPOINTS
-$screen-xs: 320px;
 $screen-sm: 576px;
 $screen-md: 768px;
 $screen-lg: 1025px;
-$screen-xl: 1680px;
+$screen-xl: 1366px;
 
 $screen-xs-max: $screen-sm - 0.02;
 $screen-sm-max: $screen-md - 0.02;
 $screen-md-max: $screen-lg - 0.02;
 $screen-lg-max: $screen-xl - 0.02;
+
+$screen-min: 320px;
+$screen-max: 1680px;
 
 :root {
 	--color-black: #000;
@@ -40,13 +42,13 @@ $screen-lg-max: $screen-xl - 0.02;
 	--gutter: 15px;
 	--gutter-negative: calc(-1 * var(--gutter));
 	--container-max-width: calc(1424px + var(--gutter) * 2);
-	--responsive-width: #{$screen-xl};
+	--responsive-width: #{$screen-max};
 
-	@media (max-width: $screen-xl) and (min-width: $screen-xs) {
+	@media (max-width: $screen-max) and (min-width: $screen-min) {
 		--responsive-width: 100vw;
 	}
 
-	@media (max-width: $screen-xs - 1) {
-		--responsive-width: #{$screen-xs};
+	@media (max-width: $screen-min - 0.02) {
+		--responsive-width: #{$screen-min};
 	}
 }

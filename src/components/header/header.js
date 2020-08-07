@@ -14,7 +14,17 @@ export default class extends Controller {
 	}
 
 	connect() {
-		this.render.transparent();
+		if (this.transparent) {
+			this.enableTransparent();
+		}
+	}
+
+	enableTransparent() {
+		this.element.classList.add('header--transparent');
+	}
+
+	disableTransparent() {
+		this.element.classList.remove('header--transparent');
 	}
 
 	toggleMenuMobile() {
@@ -29,54 +39,32 @@ export default class extends Controller {
 
 	get render() {
 		return {
-			transparent: () => {
-				this.element.classList.toggle('header--transparent', this.transparent);
-
-				if (this.transparent) {
-					cssVars({
-						variables: {
-							'--header_-_background-color': 'transparent',
-							'--header_-_color': 'var(--color-alabaster)',
-							'--header-button-login_-_border-color': 'transparent',
-						},
-					});
-				} else {
-					cssVars({
-						variables: {
-							'--header_-_background-color': 'var(--color-white)',
-							'--header_-_color': 'var(--color-tundora)',
-							'--header-button-login_-_border-color': '#DDDDDD',
-						},
-					});
-				}
-			},
-
 			menuMobileOpened: () => {
 				this.buttonMenuTarget.classList.toggle('is-opened', this.menuMobileOpened);
 				this.transitionShowMenuMobile(this.menuMobileOpened);
-				this.transparent = !this.menuMobileOpened;
 
 				if (this.menuMobileOpened) {
 					window.scrollTo(0, 0);
 					disableBodyScroll(this.element, {
 						reserveScrollBarGap: true,
 					});
+
+					if (this.transparent) {
+						this.disableTransparent();
+					}
 				} else {
 					enableBodyScroll(this.element);
+
+					if (this.transparent) {
+						this.enableTransparent();
+					}
 				}
 			},
 		};
 	}
 
 	get transparent() {
-		return JSON.parse(this.data.get('transparent'));
-	}
-
-	set transparent(val) {
-		if (val !== this.transparent) {
-			this.data.set('transparent', val);
-			this.render.transparent();
-		}
+		return this.data.has('transparent');
 	}
 
 	get menuMobileOpened() {

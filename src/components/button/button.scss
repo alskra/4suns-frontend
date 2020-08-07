@@ -1,3 +1,7 @@
+:root {
+	--button--login_-_border-color: #DDDDDD;
+}
+
 .button {
 	$r: &;
 
@@ -25,7 +29,7 @@
 	&--login {
 		@media (min-width: $screen-lg) {
 			border-radius: 8px;
-			border: 1px solid var(--header-button-login_-_border-color, #DDDDDD);
+			border: 1px solid var(--button--login_-_border-color);
 			padding: 0 15px;
 			height: 40px;
 			background: var(--color-white);

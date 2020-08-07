@@ -2,7 +2,7 @@
 	&__body {
 		display: flex;
 		flex-flow: column;
-		min-width: $screen-xs;
+		min-width: $screen-min;
 		min-height: 100vh;
 		overflow-x: hidden;
 		background: #F9F9F9;

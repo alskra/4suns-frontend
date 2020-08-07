@@ -2,7 +2,6 @@
 	--header_-_height: 72px;
 	--header_-_background-color: var(--color-white);
 	--header_-_color: var(--color-tundora);
-	--header-button-login_-_border-color: #DDDDDD;
 
 	@media (max-width: $screen-md-max) {
 		--header_-_height: 65px;
@@ -12,10 +11,16 @@
 .header {
 	$r: &;
 
+	--header-nav_-_color: var(--header_-_color);
+
 	height: var(--header_-_height);
 	background: var(--header_-_background-color);
 
 	&--transparent {
+		--header_-_background-color: transparent;
+		--header_-_color: var(--color-alabaster);
+		--button--login_-_border-color: transparent;
+
 		margin-bottom: calc(-1 * var(--header_-_height));
 	}
 
@@ -28,6 +33,7 @@
 
 	&__button-menu {
 		position: relative;
+		margin-right: 24px;
 		border: 0;
 		padding: 0;
 		width: 24px;
@@ -65,6 +71,7 @@
 		background: var(--color-flush-orange);
 		transition: transform, opacity;
 		transition-duration: $duration-normal;
+		pointer-events: none;
 
 		&:nth-child(1) {
 			transform: translateY(-8px);
@@ -76,7 +83,7 @@
 	}
 
 	&__logo {
-		margin-right: 40px;
+		margin-right: max-to-min(40px, 20px);
 		flex: none;
 		width: 40px;
 		height: 40px;
@@ -107,7 +114,7 @@
 		line-height: 1;
 		text-align: right;
 
-		@media (max-width: $screen-xl) {
+		@media (max-width: $screen-lg-max) {
 			display: none;
 		}
 	}

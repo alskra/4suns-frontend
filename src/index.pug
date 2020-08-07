@@ -15,6 +15,9 @@ append vars
 		const jsv = 'javascript:void(0)';
 		let headerTransparent = false;
 
+append head-end
+	<script>window.MSInputMethodContext && document.documentMode && document.write('<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\x2fscript>');</script>
+
 block content
-	+header()(data-header-transparent=headerTransparent.toString())
+	+header()(class={'--transparent': headerTransparent} data-header-transparent=headerTransparent ? '' : null)
 	block main

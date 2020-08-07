@@ -1,4 +1,6 @@
 import '@babel/polyfill';
+import 'mdn-polyfills/CustomEvent';
+import 'classlist-polyfill';
 import 'ninelines-ua-parser';
 import 'focus-visible';
 import svg4everybody from 'svg4everybody';
@@ -7,7 +9,7 @@ import $ from 'jquery';
 import '@stimulus/polyfills';
 
 svg4everybody();
-cssVars();
+// cssVars();
 
 window.$ = $;
 window.jQuery = $;
