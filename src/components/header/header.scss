@@ -13,6 +13,8 @@
 
 	--header-nav_-_color: var(--header_-_color);
 
+	position: relative;
+	z-index: 100;
 	height: var(--header_-_height);
 	background: var(--header_-_background-color);
 

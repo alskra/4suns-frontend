@@ -1,0 +1,77 @@
+.footer {
+	display: flex;
+	flex-flow: column;
+	margin-top: auto;
+	border-top: 4px solid rgba($color-black, 0.1);
+	padding: 40px 0;
+	min-height: 146px;
+	overflow: hidden;
+	background: #F8F8F8;
+	color: var(--color-tundora);
+	font-weight: 500;
+	font-size: 12px;
+	line-height: (18 / 12);
+
+	a {
+		color: var(--color-flush-orange);
+		text-decoration: none;
+
+		&[href^='tel:'] {
+			color: inherit;
+		}
+	}
+
+	&__container {
+		@include container;
+		margin: auto;
+	}
+
+	&__grid {
+		display: flex;
+		flex-flow: wrap;
+		margin: -10px max-to-min(-20px, -15px);
+	}
+
+	&__cell {
+		padding: 10px max-to-min(20px, 15px);
+		flex: 0 0 25%;
+
+		&:nth-child(4) {
+			text-align: right;
+		}
+
+		@media (max-width: $screen-sm-max) and (min-width: $screen-sm) {
+			flex-basis: 50%;
+
+			&:nth-child(1) {
+				order: 1;
+				text-align: right;
+			}
+
+			&:nth-child(2) {
+				order: 0;
+			}
+
+			&:nth-child(3) {
+				order: 2;
+			}
+
+			&:nth-child(4) {
+				order: 3;
+			}
+		}
+
+		@media (max-width: $screen-xs-max) {
+			flex-basis: 100%;
+
+			&:nth-child(4) {
+				padding-top: 30px;
+				text-align: left;
+			}
+		}
+	}
+
+	&__copyright {
+		color: #9B9B9B;
+	}
+}

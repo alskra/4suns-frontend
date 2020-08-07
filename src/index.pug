@@ -1,5 +1,6 @@
 extends pug/base
 include components/header/header
+include components/footer/footer
 
 prepend vars
 	-
@@ -20,4 +21,8 @@ append head-end
 
 block content
 	+header()(class={'--transparent': headerTransparent} data-header-transparent=headerTransparent ? '' : null)
-	block main
+
+	+b.main
+		block main
+
+	+footer()
