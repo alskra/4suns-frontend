@@ -1,0 +1,39 @@
+mixin header-nav(mobile = false)
+	-
+		const items = [
+			{
+				content: 'Главная',
+				url: baseDir
+			},
+			{
+				content: 'Услуги',
+				url: jsv
+			},
+			{
+				content: 'Объекты',
+				url: jsv
+			},
+			{
+				content: 'Компания',
+				url: jsv
+			},
+			{
+				content: 'Новости',
+				url: jsv
+			},
+			{
+				content: 'FAQ',
+				url: jsv
+			},
+			{
+				content: 'Контакты',
+				url: jsv
+			}
+		];
+
+	+b.NAV.header-nav(class={'--mobile': mobile})&attributes(attributes)
+		+e.grid
+			each item in mobile ? items : items.splice(1)
+				+e.cell
+					+e.A.item(href=item.url)
+						| #{item.content}

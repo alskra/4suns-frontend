@@ -22,6 +22,10 @@ a[role="button"]:not([disabled]) {
 	cursor: pointer;
 }
 
+[hidden] {
+	display: none !important;
+}
+
 :focus:not(.focus-visible) {
 	outline: none;
 }

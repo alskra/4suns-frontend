@@ -1,18 +1,5 @@
 // stylelint-disable scss/dollar-variable-empty-line-before
 
-:root {
-	--color-black: #000;
-	--color-white: #fff;
-	--color-mine-shaft: #303030;
-	--color-emperor: #545454;
-	--color-flush-orange: #FF8200;
-	--color-tundora: #4A4A4A;
-	--font-family-jost: 'Jost', sans-serif;
-	--container-max-width: 1454px;
-	--gutter: 15px;
-	--gutter-negative: -15px;
-}
-
 // COLORS
 
 $color-black: #000;
@@ -21,13 +8,14 @@ $color-white: #fff;
 // FONTS
 
 // EASING TRANSITIONS
-$duration-normal: 0.4s;
+$duration-normal: 0.2s;
 $easing-back-out: cubic-bezier(0.25, 0.74, 0.22, 1.1); // http://cubic-bezier.com/#.25,.74,.22,1.1
 $easing-back-in: cubic-bezier(0.47, -0.1, 0.5, -0.06); // http://cubic-bezier.com/#.47,-0.1,.5,-.06
 $easing-out: ease-out;
 $easing-in: ease-in;
 
 // BREAKPOINTS
+$screen-xs: 320px;
 $screen-sm: 576px;
 $screen-md: 768px;
 $screen-lg: 1025px;
@@ -37,3 +25,28 @@ $screen-xs-max: $screen-sm - 0.02;
 $screen-sm-max: $screen-md - 0.02;
 $screen-md-max: $screen-lg - 0.02;
 $screen-lg-max: $screen-xl - 0.02;
+
+:root {
+	--color-black: #000;
+	--color-white: #fff;
+	--color-mine-shaft: #303030;
+	--color-emperor: #545454;
+	--color-flush-orange: #FF8200;
+	--color-tundora: #4A4A4A;
+	--color-alabaster: #F8F8F8;
+
+	--font-family-jost: 'Jost', sans-serif;
+
+	--gutter: 15px;
+	--gutter-negative: calc(-1 * var(--gutter));
+	--container-max-width: calc(1424px + var(--gutter) * 2);
+	--responsive-width: #{$screen-xl};
+
+	@media (max-width: $screen-xl) and (min-width: $screen-xs) {
+		--responsive-width: 100vw;
+	}
+
+	@media (max-width: $screen-xs - 1) {
+		--responsive-width: #{$screen-xs};
+	}
+}

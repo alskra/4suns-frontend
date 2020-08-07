@@ -22,6 +22,6 @@
 	@return $number;
 }
 
-@function rs($valueMax, $valueMin) {
-	@return calc(#{$valueMax} - (1200 - var(--responsive-width)) / #{1200 - 320} * #{$valueMax - $valueMin});
+@function max-to-min($valueMax, $valueMin) {
+	@return calc(#{$valueMax} - (#{$screen-xl} - var(--responsive-width)) / #{strip-unit($screen-xl - $screen-xs)} * #{strip-unit($valueMax - $valueMin)});
 }

@@ -6,54 +6,56 @@
 	align-items: center;
 	border: 0;
 	padding: 0;
+	flex: none;
 	max-width: 100%;
 	background: none;
 	text-decoration: none;
-	white-space: nowrap;
 	user-select: none;
+
+	&__icon {
+		flex: none;
+	}
 
 	&__content {
 		overflow: hidden;
 		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 
 	&--login {
-		border-radius: 10px;
-		border: 1px solid var(--color-white);
-		padding: 9px 14px 10px;
-		color: var(--color-white);
-		font-size: 1.8rem;
-		line-height: 1.25;
-		letter-spacing: 0.01em;
-		transition: background-color, color;
-		transition-duration: 0.2s;
-
-		#{$r}__icon {
-			width: 27px;
-			height: 27px;
-			fill: currentColor;
-		}
-
-		@include hover {
+		@media (min-width: $screen-lg) {
+			border-radius: 8px;
+			border: 1px solid var(--header-button-login_-_border-color, #DDDDDD);
+			padding: 0 15px;
+			height: 40px;
 			background: var(--color-white);
-			color: var(--color-limeade);
-		}
+			color: var(--color-flush-orange);
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 1.25;
+			transition: border-color, background-color, color;
+			transition-duration: $duration-normal;
 
-		@media (min-width: $screen-md) {
 			#{$r}__icon {
-				display: none;
+				margin-right: 8px;
+				width: 14px;
+				height: 16px;
+			}
+
+			@include hover {
+				border-color: transparent;
+				background: var(--color-flush-orange);
+				color: var(--color-white);
 			}
 		}
 
-		@media (max-width: $screen-sm-max) {
-			padding: 0;
-			flex: none;
-			width: 43px;
-			height: 43px;
-			background: linear-gradient(to bottom, #a1c600, #009103);
+		@media (max-width: $screen-md-max) {
+			width: 24px;
+			height: 24px;
 
-			#{$r}__content {
-				display: none;
+			#{$r}__icon {
+				width: 100%;
+				height: 100%;
 			}
 		}
 	}
@@ -72,24 +74,6 @@
 
 		@include hover {
 			background: var(--color-fun-green);
-		}
-	}
-
-	&--outline {
-		border-radius: 10px;
-		border: 1px solid currentColor;
-		padding: 8px 15px 10px;
-		background: var(--color-white);
-		color: var(--color-limeade);
-		font-size: 1.8rem;
-		line-height: 1.25;
-		letter-spacing: 0.01em;
-		transition: border-color, color;
-		transition-duration: 0.2s;
-
-		@include hover {
-			border-color: var(--color-fun-green);
-			color: var(--color-fun-green);
 		}
 	}
 }

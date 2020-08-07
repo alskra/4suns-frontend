@@ -1,8 +1,21 @@
+include ../header-nav/header-nav
 include ../button/button
-include ../menu/menu
 
 mixin header()
-	+b.HEADER.header(data-controller='header')&attributes(attributes)
+	+b.HEADER.header(
+		data-controller='header'
+	)&attributes(attributes)
 		+e.container
-			+e.A.logo(href=`${baseDir}`)
+			+e.A.logo(href=baseDir)
 				+svg('logo').logo-img
+
+			+header-nav().__nav
+
+			+e.phone-text
+				| Диспетчерская#[br] (круглосуточно)
+
+			+e.A.phone(href='tel:+74952300130')
+				| +7 (495) 230–01–30
+
+			+button('a', 'user').--login.__button-login(href=jsv)
+				| Личный кабинет

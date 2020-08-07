@@ -1,4 +1,5 @@
 extends pug/base
+include components/header/header
 
 prepend vars
 	-
@@ -9,6 +10,11 @@ append vars
 		baseDir = './';
 		html.classList.push('app');
 		body.classList.push('app__body');
+		meta.viewport = 'width=device-width, initial-scale=1, shrink-to-fit=no';
+
 		const jsv = 'javascript:void(0)';
+		let headerMod = '';
 
 block content
+	+header()(class=headerMod)
+	block main
