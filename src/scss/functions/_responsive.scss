@@ -23,5 +23,10 @@
 }
 
 @function max-to-min($valueMax, $valueMin) {
-	@return calc(#{$valueMax} - (#{$screen-max} - var(--responsive-width)) / #{strip-unit($screen-max - $screen-min)} * #{strip-unit($valueMax - $valueMin)});
+	@return calc(
+		#{$valueMax} -
+		(#{$responsive-width-max} - var(--responsive-width)) /
+		#{strip-unit($responsive-width-max - $responsive-width-min)} *
+		#{strip-unit($valueMax - $valueMin)}
+	);
 }
