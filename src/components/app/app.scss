@@ -9,8 +9,12 @@
 		font-family: var(--font-family-jost);
 	}
 
+	&__header {
+		
+	}
+
 	&__main {
-		margin-top: calc(var(--header_-_height) + 50px);
+		margin-top: calc(var(--header_-_height) + 30px);
 	}
 
 	&__footer {
