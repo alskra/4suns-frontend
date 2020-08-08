@@ -4,6 +4,44 @@ mixin posts-widget()
 	-
 		const isFaq = !!attributes.class && attributes.class.indexOf('--faq') !== -1;
 
+		const news = [
+			{
+				date: '22.04.2020',
+				title: 'О предоставлении субсидий за оплату коммунальных услуг'
+			},
+			{
+				date: '21.04.2020',
+				title: 'Информация по оплате коммунальный услуг'
+			},
+			{
+				date: '29.11.2019',
+				title: 'Переезд инженерной службы'
+			},
+			{
+				date: '24.05.2019',
+				title: 'Электронные услуги ЖКХ'
+			}
+		];
+
+		const faq = [
+			{
+				date: '# 12517&nbsp;/ 18.06.2015',
+				title: 'Какой порядок рассмотрения и исполнения заявок и обращений?'
+			},
+			{
+				date: '# 4575&nbsp;/ 10.11.2014',
+				title: 'Какими способами я могу оплачивать электроэнергию?'
+			},
+			{
+				date: '# 3787&nbsp;/ 11.10.2014',
+				title: 'Где я могу получить кадастровый паспорт?'
+			},
+			{
+				date: '# 3786&nbsp;/ 11.10.2014',
+				title: 'Вы будете проводить перепрограммирование, или этот вопрос решается с Мосэнергосбытом?'
+			}
+		];
+
 	+b.ASIDE.posts-widget&attributes(attributes)
 		+e.header
 			+e.title= isFaq ? 'FAQ' : 'Новости'
@@ -12,6 +50,17 @@ mixin posts-widget()
 				+button('a', 'chat').--primary.__button-header(href=jsv)
 					| Задать вопрос
 
+		+e.main
+			each item in isFaq ? faq : news
+				+e.A.item(href=jsv)
+					+e.DIV.item-header
+						+e.item-date
+							| !{item.date}
+
+					+e.DIV.item-title
+						| !{item.title}
+
 		+e.footer
-			+e.A.more
+			+e.A.link-more(href=jsv)
+				| Все #{isFaq ? 'вопросы' : 'новости'} →
 
