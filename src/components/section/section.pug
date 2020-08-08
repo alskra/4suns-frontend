@@ -1,0 +1,20 @@
+include ../content/content
+
+mixin section(type, title)
+	+b.SECTION.section(class=type ? `--${type}` : null)&attributes(attributes)
+		+e.container
+			+e.HEADER.header
+				if type === 'services'
+					+e.header-grid
+						+e.header-cell
+							+e.H2.title
+								| !{title}
+
+						+e.header-cell
+							+content().--smaller
+								p Управляющая компания &laquo;Четыре солнца&raquo; предлагает полный перечень услуг по&nbsp;эксплуатации жилых и&nbsp;не&nbsp;жилых зданий в&nbsp;городе Москва, в&nbsp;соответствии с&nbsp;нормами законодательства Российской Федерации.
+				else
+					+e.H2.title
+						| !{title}
+
+			block

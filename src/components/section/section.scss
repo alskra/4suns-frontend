@@ -1,0 +1,42 @@
+.section {
+	padding: max-to-min(50px, 25px) 0 max-to-min(65px, 30px);
+	background: var(--color-white);
+
+	&__container {
+		@include container;
+	}
+
+	&__header {
+		margin-bottom: 30px;
+	}
+
+	&__header-grid {
+		display: flex;
+
+		@media (max-width: $screen-sm-max) {
+			flex-flow: column;
+		}
+	}
+
+	&__header-cell {
+		&:nth-child(2) {
+			align-self: center;
+			margin: 0 0 0 60px;
+			max-width: 765px;
+		}
+
+		@media (max-width: $screen-sm-max) {
+			&:nth-child(2) {
+				margin: 15px 0 0;
+			}
+		}
+	}
+
+	&__title {
+		margin: 0;
+		color: var(--color-tundora);
+		font-weight: 400;
+		font-size: max-to-min(48px, 40px);
+		line-height: 1.25;
+	}
+}

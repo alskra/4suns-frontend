@@ -8,4 +8,12 @@
 		background: #F9F9F9;
 		font-family: var(--font-family-jost);
 	}
+
+	&__main {
+		margin-top: calc(var(--header_-_height) + 50px);
+	}
+
+	&__footer {
+		margin-top: auto;
+	}
 }

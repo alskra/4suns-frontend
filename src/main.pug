@@ -1,8 +1,9 @@
 extends index
+include components/section/section
 
 append vars
 	-
 		headerTransparent = true;
 
 block main
-	| Index page
+	+section('services', 'Услуги')

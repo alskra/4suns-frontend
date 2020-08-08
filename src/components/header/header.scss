@@ -105,6 +105,7 @@
 
 	&__nav {
 		margin-right: auto;
+		min-width: 0;
 	}
 
 	&__phone-text {
@@ -139,9 +140,12 @@
 
 	&__button-login {
 		margin-left: 24px;
+		flex: none;
 	}
 
 	&__menu-mobile {
+		display: flex;
+		flex-flow: column;
 		position: absolute;
 		top: var(--header_-_height);
 		left: 0;
@@ -167,5 +171,21 @@
 		&.leave-to {
 			opacity: 0;
 		}
+	}
+
+	&__nav-mobile {
+		margin-bottom: auto;
+	}
+
+	&__menu-mobile-footer {
+		margin-top: 20px;
+		padding: 16px;
+	}
+
+	&__menu-mobile-copyright {
+		color: var(--color-dusty-gray);
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 1.25;
 	}
 }

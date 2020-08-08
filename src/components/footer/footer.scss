@@ -1,7 +1,6 @@
 .footer {
 	display: flex;
 	flex-flow: column;
-	margin-top: auto;
 	border-top: 4px solid rgba($color-black, 0.1);
 	padding: 40px 0;
 	min-height: 146px;
@@ -18,7 +17,7 @@
 		transition: color $duration-normal;
 
 		@include hover {
-			&:not([href^='tel:']) {
+			&:not(a[href^='tel:']) {
 				color: var(--color-mango-tango);
 			}
 		}
@@ -29,7 +28,7 @@
 	}
 
 	.color-lighten {
-		color: #9B9B9B;
+		color: var(--color-dusty-gray);
 	}
 
 	&__container {

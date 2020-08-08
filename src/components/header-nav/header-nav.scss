@@ -41,6 +41,7 @@
 
 	&__cell {
 		margin: 0 max-to-min(20px, 10px);
+		min-width: 0;
 	}
 
 	&__item {

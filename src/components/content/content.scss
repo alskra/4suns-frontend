@@ -1,0 +1,31 @@
+:root {
+	--content_-_color: var(--color-tundora);
+	--content_-_font-size: 16px;
+	--content_-_line-height: 1.25;
+	--content_-_interval: calc(var(--content_-_font-size) * var(--content_-_line-height));
+}
+
+.content {
+	color: var(--content_-_color);
+	font-size: var(--content_-_font-size);
+	line-height: var(--content_-_line-height);
+
+	&::before,
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	p {
+		margin: 0;
+
+		&:not(:last-child) {
+			margin-bottom: var(--content_-_interval);
+		}
+	}
+
+	&--smaller {
+		--content_-_font-size: 14px;
+	}
+}
