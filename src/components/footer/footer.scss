@@ -12,13 +12,13 @@
 	line-height: (18 / 12);
 
 	a {
-		color: var(--color-flush-orange);
+		color: var(--color-primary);
 		text-decoration: none;
 		transition: color $duration-normal;
 
 		@include hover {
-			&:not(a[href^='tel:']) {
-				color: var(--color-mango-tango);
+			&:not([href^='tel:']) {
+				color: var(--color-primary-hover);
 			}
 		}
 

@@ -1,0 +1,38 @@
+.section-promo {
+	padding: max-to-min(60px, 30px) 0;
+	background: none no-repeat 50% / cover;
+
+	&__container {
+		@include container;
+	}
+
+	&__grid {
+		max-width: 480px;
+	}
+
+	&__title {
+		margin: 0 0 30px;
+		color: var(--color-white);
+		font-weight: 400;
+		font-size: max-to-min(48px, 32px);
+		line-height: var(--line-height-heading);
+	}
+
+	&__content {
+		color: var(--color-white);
+		font-size: max-to-min(24px, 16px);
+		line-height: 1.25;
+
+		p {
+			margin: 0;
+
+			&:not(:last-child) {
+				margin-bottom: 1.25em;
+			}
+		}
+	}
+
+	&__footer {
+		margin-top: max-to-min(100px, 50px);
+	}
+}

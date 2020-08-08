@@ -1,0 +1,34 @@
+mixin services()
+	-
+		const items = [
+			{
+				title: 'Техническое обслуживание объектов недвижимости и эксплуатация инженерных сетей, управление объектами недвижимости, экстренное устранение аварийных ситуаций',
+				image: `${baseDir}images/content/services/1.jpg`
+			},
+			{
+				title: 'Управление объектами недвижимости',
+				image: `${baseDir}images/content/services/2.jpg`
+			},
+			{
+				title: 'Экстренное устранение аварийных ситуаций',
+				image: `${baseDir}images/content/services/3.jpg`
+			},
+			{
+				title: 'Коммерческие услуги',
+				image: `${baseDir}images/content/services/4.jpg`
+			}
+		];
+
+	+b.services&attributes(attributes)
+		+e.grid
+			each item in items
+				+e.A.item(href=jsv title=item.title)
+					+e.IMG.item-image(src=item.image alt=item.title)
+
+					+e.DIV.item-body
+						+e.H3.item-title
+							| #{item.title}
+
+			+e.item--space
+			+e.item--space
+			+e.item--space

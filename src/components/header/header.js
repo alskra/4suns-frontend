@@ -1,5 +1,4 @@
 import {Controller} from 'stimulus';
-import cssVars from 'css-vars-ponyfill';
 import transitionShow from '../../js/vendor/transition-show';
 import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 

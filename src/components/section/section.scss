@@ -1,5 +1,9 @@
+:root {
+	--section_-_padding-y: #{max-to-min(60px, 30px)} 0;
+}
+
 .section {
-	padding: max-to-min(50px, 25px) 0 max-to-min(65px, 30px);
+	padding: var(--section_-_padding-y);
 	background: var(--color-white);
 
 	&__container {
@@ -37,6 +41,6 @@
 		color: var(--color-tundora);
 		font-weight: 400;
 		font-size: max-to-min(48px, 40px);
-		line-height: 1.25;
+		line-height: var(--line-height-heading);
 	}
 }

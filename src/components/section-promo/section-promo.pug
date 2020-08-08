@@ -1,0 +1,17 @@
+include ../button/button
+
+mixin section-promo()
+	+b.section-promo(
+		style={'background-image': `url(${baseDir}images/content/promo.jpg)`}
+	)&attributes(attributes)
+		+e.container
+			+e.grid
+				+e.H2.title
+					| Сделайте свой дом по-настоящему умным!
+
+				+e.content
+					p В&nbsp;вашем доме установлена система Comelit, включающая домофон, видеонаблюдение, сигнализацию и&nbsp;умный дом.
+
+				+e.footer
+					+button('a').--primary(href=jsv)
+						| Узнать подробности

@@ -44,7 +44,13 @@ $responsive-width-max: 1680px;
 	--color-alabaster: #F8F8F8;
 	--color-dusty-gray: #9B9B9B;
 
+	--color-primary: var(--color-flush-orange);
+	--color-primary-hover: var(--color-mango-tango);
+
 	--font-family-jost: 'Jost', sans-serif;
+
+	--line-height: 1.25;
+	--line-height-heading: 1.1;
 
 	--gutter: 15px;
 	--gutter-negative: calc(-1 * var(--gutter));

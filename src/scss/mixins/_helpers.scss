@@ -70,6 +70,32 @@
 	}
 }
 
+// https://www.npmjs.com/package/object-fit-images
+@mixin object-fit($fit: fill, $position: null){
+	object-fit: $fit;
+
+	@if $position {
+		object-position: $position;
+		font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+	} @else {
+		font-family: 'object-fit: #{$fit}';
+	}
+}
+
+@mixin line-clamp($font-size, $line-height, $lines-to-show) {
+	@if unitless($line-height) == false {
+		@error '$line-height must be a number';
+	}
+
+	overflow: hidden;
+	max-height: $line-height * $lines-to-show * 1em;
+	font-size: $font-size;
+	line-height: $line-height;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $lines-to-show;
+}
+
 @mixin container {
 	margin: 0 auto;
 	padding: 0 var(--gutter);

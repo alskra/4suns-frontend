@@ -64,19 +64,19 @@
 	}
 
 	&--primary {
-		border-radius: 10px;
-		border: 1px solid transparent;
-		padding: 8px 15px 10px;
-		background: var(--color-limeade);
+		border-radius: 8px;
+		padding: 0 20px;
+		height: 40px;
+		background: var(--color-primary);
 		color: var(--color-white);
-		font-size: 1.8rem;
+		font-weight: 500;
+		font-size: 16px;
 		line-height: 1.25;
-		letter-spacing: 0.01em;
-		transition: border-color, background-color;
-		transition-duration: 0.2s;
+		transition: border-color, background-color, color;
+		transition-duration: $duration-normal;
 
 		@include hover {
-			background: var(--color-fun-green);
+			background: var(--color-primary-hover);
 		}
 	}
 }

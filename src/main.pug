@@ -1,5 +1,7 @@
 extends index
 include components/section/section
+include components/services/services
+include components/section-promo/section-promo
 
 append vars
 	-
@@ -7,3 +9,6 @@ append vars
 
 block main
 	+section('services', 'Услуги')
+		+services()
+
+	+section-promo()

@@ -1,5 +1,3 @@
-import cssVars from 'css-vars-ponyfill';
-
 let vars = {};
 export let lastPageYOffset = null;
 
