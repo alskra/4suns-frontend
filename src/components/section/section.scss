@@ -4,7 +4,14 @@
 
 .section {
 	padding: var(--section_-_padding-y);
-	background: var(--color-white);
+
+	&--services {
+		background: var(--color-white);
+	}
+
+	&--about {
+		background: #F8F8F8;
+	}
 
 	&__container {
 		@include container;
@@ -14,7 +21,7 @@
 		margin-bottom: 30px;
 	}
 
-	&__header-grid {
+	&__grid-header {
 		display: flex;
 
 		@media (max-width: $screen-sm-max) {
@@ -22,11 +29,10 @@
 		}
 	}
 
-	&__header-cell {
+	&__cell-header {
 		&:nth-child(2) {
 			align-self: center;
-			margin: 0 0 0 60px;
-			max-width: 765px;
+			margin: 0 0 0 max-to-min(60px, 30px);
 		}
 
 		@media (max-width: $screen-sm-max) {
@@ -42,5 +48,69 @@
 		font-weight: 400;
 		font-size: max-to-min(48px, 40px);
 		line-height: var(--line-height-heading);
+	}
+
+	&__desc {
+		max-width: 765px;
+	}
+
+	&__grid-about {
+		display: flex;
+
+		@media (max-width: $screen-md-max) {
+			flex-flow: wrap;
+		}
+	}
+
+	&__cell-about {
+		flex: none;
+
+		&:nth-child(1) {
+			padding-right: max-to-min(80px, 30px);
+			width: percentage(604 / 1424);
+		}
+
+		&:nth-child(2) {
+			display: flex;
+			width: percentage(820 / 1424);
+		}
+
+		@media (max-width: $screen-md-max) {
+			&:nth-child(1) {
+				margin-bottom: max-to-min(60px, 30px);
+				padding: 0;
+				width: 100%;
+			}
+
+			&:nth-child(2) {
+				width: 100%;
+			}
+		}
+
+		@media (max-width: $screen-sm-max) {
+			&:nth-child(2) {
+				flex-flow: wrap;
+			}
+		}
+	}
+
+	&__news {
+		margin-right: var(--gutter);
+		flex: 1 1 333px;
+
+		@media (max-width: $screen-sm-max) {
+			margin: 0;
+			flex: 0 0 100%;
+		}
+	}
+
+	&__faq {
+		margin-left: var(--gutter);
+		flex: 1 1 454px;
+
+		@media (max-width: $screen-sm-max) {
+			margin: var(--gutter) 0 0;
+			flex: 0 0 100%;
+		}
 	}
 }

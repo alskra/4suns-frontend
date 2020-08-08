@@ -1,0 +1,17 @@
+include ../button/button
+
+mixin posts-widget()
+	-
+		const isFaq = !!attributes.class && attributes.class.indexOf('--faq') !== -1;
+
+	+b.ASIDE.posts-widget&attributes(attributes)
+		+e.header
+			+e.title= isFaq ? 'FAQ' : 'Новости'
+
+			if isFaq
+				+button('a', 'chat').--primary.__button-header(href=jsv)
+					| Задать вопрос
+
+		+e.footer
+			+e.A.more
+

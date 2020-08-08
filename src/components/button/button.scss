@@ -75,6 +75,15 @@
 		transition: border-color, background-color, color;
 		transition-duration: $duration-normal;
 
+		#{$r}__icon {
+			&--chat {
+				margin-right: 8px;
+				width: 18px;
+				height: 16px;
+				transform: translateY(1px);
+			}
+		}
+
 		@include hover {
 			background: var(--color-primary-hover);
 		}

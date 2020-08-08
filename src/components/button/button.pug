@@ -1,7 +1,7 @@
 mixin button(tag = 'button', icon)
 	+b({tag}).button(role=tag === 'a' ? 'button' : null)&attributes(attributes)
 		if icon
-			+svg(icon).icon
+			+svg(icon).icon(class=`--${icon}`)
 
 		if block
 			+e.SPAN.content

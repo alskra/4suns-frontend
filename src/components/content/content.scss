@@ -3,9 +3,11 @@
 	--content_-_font-size: 16px;
 	--content_-_line-height: 1.25;
 	--content_-_interval: calc(var(--content_-_font-size) * var(--content_-_line-height));
+	--content_-_max-width: none;
 }
 
 .content {
+	max-width: var(--content_-_max-width);
 	color: var(--content_-_color);
 	font-size: var(--content_-_font-size);
 	line-height: var(--content_-_line-height);

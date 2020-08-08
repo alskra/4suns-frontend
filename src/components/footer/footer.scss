@@ -2,8 +2,7 @@
 	display: flex;
 	flex-flow: column;
 	border-top: 4px solid rgba($color-black, 0.1);
-	padding: 40px 0;
-	min-height: 146px;
+	padding: max-to-min(60px, 30px) 0;
 	overflow: hidden;
 	background: #F8F8F8;
 	color: var(--color-tundora);
@@ -33,7 +32,6 @@
 
 	&__container {
 		@include container;
-		margin: auto;
 	}
 
 	&__grid {
@@ -44,14 +42,14 @@
 
 	&__cell {
 		padding: 10px max-to-min(20px, 15px);
-		flex: 0 0 25%;
 
 		&:nth-child(4) {
+			flex: 1 1 auto;
 			text-align: right;
 		}
 
 		@media (max-width: $screen-sm-max) and (min-width: $screen-sm) {
-			flex-basis: 50%;
+			flex: 0 0 50%;
 
 			&:nth-child(1) {
 				order: 1;
@@ -72,10 +70,10 @@
 		}
 
 		@media (max-width: $screen-xs-max) {
-			flex-basis: 100%;
+			flex: 0 0 100%;
 
 			&:nth-child(4) {
-				padding-top: 30px;
+				margin-top: 10px;
 				text-align: left;
 			}
 		}

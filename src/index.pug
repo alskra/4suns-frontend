@@ -20,9 +20,9 @@ append head-end
 	<script>window.MSInputMethodContext && document.documentMode && document.write('<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\x2fscript>');</script>
 
 block content
-	+header().app__header(class={'--transparent': headerTransparent} data-header-transparent=headerTransparent ? '' : null)
+	+header().app__header(class={'header--transparent': headerTransparent} data-header-transparent=headerTransparent ? '' : null)
 
-	.app__main
+	main.app__main
 		block main
 
 	+footer().app__footer
