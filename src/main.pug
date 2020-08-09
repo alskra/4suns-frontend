@@ -1,14 +1,18 @@
 extends index
+include components/slider-main/slider-main
 include components/section/section
 include components/services/services
 include components/section-promo/section-promo
 include components/map-objects/map-objects
+include components/objects/objects
 
 append vars
 	-
 		headerTransparent = true;
 
 block main
+	+slider-main()
+	
 	+section({
 		title: 'Услуги',
 		desc: `
@@ -21,6 +25,8 @@ block main
 
 	+section({title: 'Объекты'}).--objects
 		+map-objects()
+		+e.container
+			+objects().__objects
 
 	+section-promo()
 	+section().--about

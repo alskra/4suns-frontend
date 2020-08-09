@@ -1,0 +1,49 @@
+mixin objects()
+	-
+		const items = [
+			{
+				image: `${baseDir}images/content/objects/nekrasovka.jpg`,
+				title: 'Некрасовка-Парк',
+				content: [
+					'25',
+					'П-44Т, П-44К, Д25Н1',
+					'360&nbsp;000&nbsp;м&sup2;',
+					'Более 6&nbsp;500'
+				]
+			},
+			{
+				image: `${baseDir}images/content/objects/rumyantsevo.jpg`,
+				title: 'Румянцево-Парк',
+				content: [
+					'3',
+					'Монолит',
+					'222&nbsp;000&nbsp;м&sup2;',
+					'Более 4&nbsp;200'
+				]
+			}
+		];
+
+	+b.objects&attributes(attributes)
+		+e.grid
+			each item in items
+				+e.item
+					+e.item-image-box
+						+e.IMG.item-image(src=item.image alt=item.title)
+
+					+e.item-body
+						+e.H2.item-title
+							| !{item.title}
+
+						+e.TABLE.item-table
+							tr
+								td Количество домов
+								td !{item.content[0]}
+							tr
+								td Тип домов
+								td !{item.content[1]}
+							tr
+								td Общая площадь
+								td !{item.content[2]}
+							tr
+								td Счастливых семей
+								td !{item.content[3]}
