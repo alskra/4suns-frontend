@@ -1,6 +1,7 @@
 include ../content/content
 include ../posts-widget/posts-widget
 include ../contacts/contacts
+include ../map-contacts/map-contacts
 
 mixin section({title, desc} = {})
 	+b.SECTION.section&attributes(attributes)
@@ -30,7 +31,7 @@ mixin section({title, desc} = {})
 				+e.main
 					+e.grid-contacts
 						+e.cell-contacts
-							.map-contacts
+							+map-contacts()
 
 						+e.cell-contacts
 							+contacts()
