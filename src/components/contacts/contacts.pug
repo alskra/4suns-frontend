@@ -1,0 +1,46 @@
+include ../content/content
+
+mixin contacts()
+	+b.contacts&attributes(attributes)
+		+e.grid
+			+e.cell
+				+content()
+					dl
+						dt Юридический адрес:
+						dd г. Москва, ул. Ухтомского Ополчения д.3.
+
+						dt Инженерная служба:
+						dd г. Москва, проспект Защитников Москвы д.&nbsp;14.
+
+						dt Диспетчерская служба:
+						dd
+							a.phone-number(href='tel:+74952300130') +7 (495) 230&mdash;01&mdash;30#[br]
+							small (круглосуточно)
+
+						dt Коммерческий отдел:
+						dd
+							a.phone-number(href='tel:+74952300131') +7 (495) 230&mdash;01&mdash;31#[br]
+							small (с 8.00 до 17.00)
+
+					p
+						a.medium(href='mailto:nekrasovka-park@uk-4suns.ru') nekrasovka-park@uk-4suns.ru
+
+			+e.cell
+				+content().--larger
+					h3 Режим работы
+
+					dl
+						dt Инженерная служба:
+						dd пн. -&nbsp;пт., с&nbsp;8:00 до&nbsp;17:00
+
+						dt Бухгалтерия:
+						dd пн. -&nbsp;пт., с&nbsp;9:00 до&nbsp;18:00
+
+						dt Коммерческий отдел:
+						dd пн. -&nbsp;пт., с&nbsp;8:00 до&nbsp;17:00
+
+						dt Перерыв на обед:
+						dd c&nbsp;12:00 до&nbsp;13:00
+
+						dt Выходной:
+						dd суббота, воскресенье

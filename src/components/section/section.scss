@@ -5,12 +5,13 @@
 .section {
 	padding: var(--section_-_padding-y);
 
-	&--services {
+	&--services,
+	&--contacts {
 		background: var(--color-white);
 	}
 
 	&--about {
-		background: #F8F8F8;
+		background: var(--color-alabaster);
 	}
 
 	&__container {
@@ -44,7 +45,7 @@
 
 	&__title {
 		margin: 0;
-		color: var(--color-tundora);
+		color: var(--color-title);
 		font-weight: 400;
 		font-size: max-to-min(48px, 40px);
 		line-height: var(--line-height-heading);
@@ -56,61 +57,79 @@
 
 	&__grid-about {
 		display: flex;
-
-		@media (max-width: $screen-md-max) {
-			flex-flow: wrap;
-		}
+		flex-flow: wrap;
+		margin: var(--gutter-negative);
 	}
 
 	&__cell-about {
+		padding: var(--gutter);
 		flex: none;
 
 		&:nth-child(1) {
-			padding-right: max-to-min(80px, 30px);
-			width: percentage(604 / 1424);
+			width: percentage(604 / 1454);
 		}
 
 		&:nth-child(2) {
-			display: flex;
-			width: percentage(820 / 1424);
+			width: percentage(850 / 1454);
 		}
 
 		@media (max-width: $screen-md-max) {
-			&:nth-child(1) {
-				margin-bottom: max-to-min(60px, 30px);
-				padding: 0;
-				width: 100%;
-			}
-
+			&:nth-child(1),
 			&:nth-child(2) {
 				width: 100%;
 			}
 		}
+	}
 
-		@media (max-width: $screen-sm-max) {
+	&__grid-widgets {
+		display: flex;
+		flex-flow: wrap;
+		margin: var(--gutter-negative);
+	}
+
+	&__widget {
+		margin: var(--gutter);
+		flex: none;
+
+		&:nth-child(1) {
+			width: calc(#{percentage(365 / 850)} - 2 * var(--gutter));
+		}
+
+		&:nth-child(2) {
+			width: calc(#{percentage(485 / 850)} - 2 * var(--gutter));
+		}
+
+		@media (max-width: $screen-xs-max) {
+			&:nth-child(1),
 			&:nth-child(2) {
-				flex-flow: wrap;
+				width: calc(100% - 2 * var(--gutter));
 			}
 		}
 	}
 
-	&__news {
-		margin-right: var(--gutter);
-		flex: 1 1 333px;
-
-		@media (max-width: $screen-sm-max) {
-			margin: 0;
-			flex: 0 0 100%;
-		}
+	&__grid-contacts {
+		display: flex;
+		flex-flow: wrap;
+		margin: var(--gutter-negative);
 	}
 
-	&__faq {
-		margin-left: var(--gutter);
-		flex: 1 1 454px;
+	&__cell-contacts {
+		padding: var(--gutter);
+		flex: none;
 
-		@media (max-width: $screen-sm-max) {
-			margin: var(--gutter) 0 0;
-			flex: 0 0 100%;
+		&:nth-child(1) {
+			width: percentage(850 / 1454);
+		}
+
+		&:nth-child(2) {
+			width: percentage(604 / 1454);
+		}
+
+		@media (max-width: $screen-md-max) {
+			&:nth-child(1),
+			&:nth-child(2) {
+				width: 100%;
+			}
 		}
 	}
 }

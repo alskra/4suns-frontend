@@ -1,5 +1,6 @@
 include ../content/content
 include ../posts-widget/posts-widget
+include ../contacts/contacts
 
 mixin section({title, desc} = {})
 	+b.SECTION.section&attributes(attributes)
@@ -9,15 +10,30 @@ mixin section({title, desc} = {})
 					+e.cell-about
 						+e.HEADER.header
 							+e.H2.title
-								| !{title}
+								| Компания
 
 						+e.main
 							+content().__content-about
-								block
+								p &laquo;Четыре Солнца&raquo; была основана в&nbsp;2010&nbsp;году. Компания занимается управлением и&nbsp;обслуживанием жилых домов в&nbsp;г. Москве.
+								p Основным приоритетом управляющей компании &laquo;Четыре Солнца&raquo; является&nbsp;&mdash; профессиональная деятельность по&nbsp;управлению жилыми комплексами, поддержанию работоспособности всех инженерных систем объектов недвижимости и&nbsp;предоставлению пользователям этих объектов различных сервисных услуг.
+								p Общая площадь эксплуатируемых зданий составляет более 360&nbsp;000&nbsp;м&sup2;&nbsp;&mdash; это 28&nbsp;жилых дома в&nbsp;Москве, а&nbsp;также нежилые здания.
 
 					+e.cell-about
-						+posts-widget().__news
-						+posts-widget().--faq.__faq
+						+e.grid-widgets
+							+posts-widget().__widget
+							+posts-widget().--faq.__widget
+			else if attributes.class.indexOf('--contacts') !== -1
+				+e.HEADER.header
+					+e.H2.title
+						| Контакты
+
+				+e.main
+					+e.grid-contacts
+						+e.cell-contacts
+							.map-contacts
+
+						+e.cell-contacts
+							+contacts()
 			else
 				+e.HEADER.header
 					if desc

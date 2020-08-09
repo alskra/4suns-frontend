@@ -1,13 +1,11 @@
 :root {
-	--content_-_color: var(--color-tundora);
+	--content_-_color: var(--color-default);
 	--content_-_font-size: 16px;
 	--content_-_line-height: 1.25;
-	--content_-_interval: calc(var(--content_-_font-size) * var(--content_-_line-height));
-	--content_-_max-width: none;
+	--content_-_interval: calc(1em * var(--content_-_line-height));
 }
 
 .content {
-	max-width: var(--content_-_max-width);
 	color: var(--content_-_color);
 	font-size: var(--content_-_font-size);
 	line-height: var(--content_-_line-height);
@@ -19,12 +17,66 @@
 		clear: both;
 	}
 
-	p {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		margin: 0;
 
 		&:not(:last-child) {
 			margin-bottom: var(--content_-_interval);
 		}
+	}
+
+	h3 {
+		font-weight: 500;
+		font-size: 18px;
+	}
+
+	p,
+	ol,
+	ul,
+	dl,
+	dd {
+		margin: 0;
+
+		&:not(:last-child) {
+			margin-bottom: var(--content_-_interval);
+		}
+	}
+
+	dt {
+		font-weight: 700;
+		font-size: 14px;
+	}
+
+	small {
+		font-size: 14 / 16 * 1em;
+	}
+
+	a {
+		color: var(--color-primary);
+		text-decoration: none;
+		transition: color $duration-normal;
+
+		@include hover {
+			color: var(--color-primary-hover);
+		}
+	}
+
+	.medium {
+		font-weight: 500;
+	}
+
+	.phone-number {
+		color: inherit;
+		font-size: 24px;
+	}
+
+	&--larger {
+		--content_-_font-size: 18px;
 	}
 
 	&--smaller {

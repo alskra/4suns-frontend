@@ -1,0 +1,27 @@
+.contacts {
+	&__grid {
+		display: flex;
+		flex-flow: wrap;
+		margin: var(--gutter-negative);
+	}
+
+	&__cell {
+		padding: var(--gutter);
+		flex: none;
+
+		&:nth-child(1) {
+			width: percentage(350 / 604);
+		}
+
+		&:nth-child(2) {
+			width: percentage(254 / 604);
+		}
+
+		@media (max-width: $screen-xs-max) {
+			&:nth-child(1),
+			&:nth-child(2) {
+				width: 100%;
+			}
+		}
+	}
+}

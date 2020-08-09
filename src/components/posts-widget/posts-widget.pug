@@ -44,7 +44,7 @@ mixin posts-widget()
 
 	+b.ASIDE.posts-widget&attributes(attributes)
 		+e.header
-			+e.title= isFaq ? 'FAQ' : 'Новости'
+			+e.H3.title= isFaq ? 'FAQ' : 'Новости'
 
 			if isFaq
 				+button('a', 'chat').--primary.__button-header(href=jsv)
@@ -53,9 +53,8 @@ mixin posts-widget()
 		+e.main
 			each item in isFaq ? faq : news
 				+e.A.item(href=jsv)
-					+e.DIV.item-header
-						+e.item-date
-							| !{item.date}
+					+e.DIV.item-date
+						| !{item.date}
 
 					+e.DIV.item-title
 						| !{item.title}
