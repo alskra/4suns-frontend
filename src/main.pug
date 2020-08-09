@@ -2,7 +2,7 @@ extends index
 include components/section/section
 include components/services/services
 include components/section-promo/section-promo
-include components/content/content
+include components/map-objects/map-objects
 
 append vars
 	-
@@ -16,9 +16,12 @@ block main
 			</p>
 		`
 	}).--services
-		+services()
+		+e.container
+			+services()
 
 	+section({title: 'Объекты'}).--objects
+		+map-objects()
+
 	+section-promo()
 	+section().--about
 	+section().--contacts
