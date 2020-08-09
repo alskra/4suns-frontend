@@ -5,8 +5,8 @@ include ../map-contacts/map-contacts
 
 mixin section({title, desc} = {})
 	+b.SECTION.section&attributes(attributes)
-		+e.container
-			if attributes.class.indexOf('--about') !== -1
+		if attributes.class.indexOf('--about') !== -1
+			+e.container
 				+e.grid-about
 					+e.cell-about
 						+e.HEADER.header
@@ -23,20 +23,23 @@ mixin section({title, desc} = {})
 						+e.grid-widgets
 							+posts-widget().__widget
 							+posts-widget().--faq.__widget
-			else if attributes.class.indexOf('--contacts') !== -1
-				+e.HEADER.header
+		else if attributes.class.indexOf('--contacts') !== -1
+			+e.HEADER.header
+				+e.container
 					+e.H2.title
 						| Контакты
 
-				+e.main
+			+e.main
+				+e.container
 					+e.grid-contacts
 						+e.cell-contacts
 							+map-contacts()
 
 						+e.cell-contacts
 							+contacts()
-			else
-				+e.HEADER.header
+		else
+			+e.HEADER.header
+				+e.container
 					if desc
 						+e.grid-header
 							+e.cell-header
@@ -50,5 +53,6 @@ mixin section({title, desc} = {})
 						+e.H2.title
 							| !{title}
 
-				+e.main
+			+e.main
+				+e.container
 					block

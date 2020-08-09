@@ -73,6 +73,10 @@
 	.phone-number {
 		color: inherit;
 		font-size: 24px;
+
+		@include hover {
+			color: inherit;
+		}
 	}
 
 	&--larger {
