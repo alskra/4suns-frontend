@@ -14,7 +14,7 @@
 	}
 
 	&__main {
-		//margin-top: calc(var(--header_-_height) + 0px);
+		margin-top: calc(-1 * var(--header_-_height));
 	}
 
 	&__footer {

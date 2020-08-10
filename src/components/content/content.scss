@@ -80,10 +80,15 @@
 	}
 
 	&--larger {
-		--content_-_font-size: 18px;
+		font-size: 18px;
 	}
 
 	&--smaller {
-		--content_-_font-size: 14px;
+		font-size: 14px;
+	}
+
+	&--article {
+		color: var(--color-mine-shaft);
+		font-size: max-to-min(24px, 18px);
 	}
 }
