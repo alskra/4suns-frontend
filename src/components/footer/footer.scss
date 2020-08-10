@@ -2,7 +2,7 @@
 	display: flex;
 	flex-flow: column;
 	border-top: 4px solid rgba($color-black, 0.1);
-	padding: max-to-min(60px, 30px) 0;
+	padding: max-to-min(64px, 32px) 0;
 	overflow: hidden;
 	background: #F8F8F8;
 	color: var(--color-default);
@@ -37,11 +37,11 @@
 	&__grid {
 		display: flex;
 		flex-flow: wrap;
-		margin: -10px max-to-min(-20px, -15px);
+		margin: -12px max-to-min(-20px, -16px);
 	}
 
 	&__cell {
-		padding: 10px max-to-min(20px, 15px);
+		padding: 12px max-to-min(20px, 16px);
 
 		&:nth-child(4) {
 			flex: 1 1 auto;
@@ -73,7 +73,7 @@
 			flex: 0 0 100%;
 
 			&:nth-child(4) {
-				margin-top: 10px;
+				margin-top: 12px;
 				text-align: left;
 			}
 		}

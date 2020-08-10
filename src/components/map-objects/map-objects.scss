@@ -1,5 +1,5 @@
 .map-objects {
-	height: max-to-min(500px, 225px);
+	height: max-to-min(496px, 224px);
 
 	&__popup-container {
 		cursor: auto;
@@ -59,7 +59,7 @@
 	&__popup-body {
 		display: flex;
 		flex-flow: column;
-		padding: max-to-min(10px, 5px);
+		padding: max-to-min(12px, 6px);
 		min-height: max-to-min(48px, 32px);
 	}
 

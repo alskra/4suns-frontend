@@ -1,7 +1,7 @@
 .section-main {
 	$r: &;
 
-	padding-bottom: max-to-min(60px, 30px);
+	padding-bottom: max-to-min(64px, 32px);
 
 	&--header-bg {
 		#{$r}__header {
@@ -16,9 +16,9 @@
 	&__header {
 		display: flex;
 		position: relative;
-		margin-bottom: 30px;
-		padding-top: calc(var(--header_-_height) + 30px);
-		padding-bottom: 30px;
+		margin-bottom: 32px;
+		padding-top: calc(var(--header_-_height) + 32px);
+		padding-bottom: 32px;
 		min-height: 320px;
 		overflow: hidden;
 		background: var(--color-alabaster);
@@ -58,7 +58,7 @@
 	}
 
 	&__breadcrumb {
-		margin-bottom: 30px;
+		margin-bottom: 32px;
 	}
 
 	&__breadcrumb-item {
@@ -93,7 +93,6 @@
 	}
 
 	&__main {
-		//padding-top: 30px;
 	}
 
 	&__column-content {
@@ -101,7 +100,7 @@
 	}
 
 	&__footer {
-		margin-top: 30px;
+		margin-top: 32px;
 	}
 
 	&__intro-faq {
@@ -112,11 +111,11 @@
 		margin-right: auto;
 		align-self: center;
 		flex: 1 1 auto;
-		max-width: 1050px;
+		max-width: 1048px;
 	}
 
 	&__intro-faq-button {
-		margin-left: calc(2 * var(--gutter));
+		margin-left: 32px;
 		flex: none;
 	}
 }

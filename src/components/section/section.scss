@@ -1,9 +1,5 @@
-:root {
-	--section_-_padding-y: #{max-to-min(60px, 30px)} 0;
-}
-
 .section {
-	padding: var(--section_-_padding-y);
+	padding: max-to-min(64px, 32px) 0;
 
 	&--services,
 	&--contacts {
@@ -20,7 +16,7 @@
 	}
 
 	&__header {
-		margin-bottom: 30px;
+		margin-bottom: 24px;
 	}
 
 	&__grid-header {
@@ -34,12 +30,12 @@
 	&__cell-header {
 		&:nth-child(2) {
 			align-self: center;
-			margin: 0 0 0 max-to-min(60px, 30px);
+			margin: 0 0 0 max-to-min(64px, 32px);
 		}
 
 		@media (max-width: $screen-sm-max) {
 			&:nth-child(2) {
-				margin: 15px 0 0;
+				margin: 16px 0 0;
 			}
 		}
 	}
@@ -53,17 +49,17 @@
 	}
 
 	&__desc {
-		max-width: 765px;
+		max-width: 768px;
 	}
 
 	&__grid-about {
 		display: flex;
 		flex-flow: wrap;
-		margin: var(--gutter-negative);
+		margin: -16px;
 	}
 
 	&__cell-about {
-		padding: var(--gutter);
+		padding: 16px;
 		flex: none;
 
 		&:nth-child(1) {
@@ -85,25 +81,25 @@
 	&__grid-widgets {
 		display: flex;
 		flex-flow: wrap;
-		margin: var(--gutter-negative);
+		margin: -16px;
 	}
 
 	&__widget {
-		margin: var(--gutter);
+		margin: 16px;
 		flex: none;
 
 		&:nth-child(1) {
-			width: calc(#{percentage(365 / 850)} - 2 * var(--gutter));
+			width: calc(#{percentage(365 / 850)} - 32px);
 		}
 
 		&:nth-child(2) {
-			width: calc(#{percentage(485 / 850)} - 2 * var(--gutter));
+			width: calc(#{percentage(485 / 850)} - 32px);
 		}
 
 		@media (max-width: $screen-xs-max) {
 			&:nth-child(1),
 			&:nth-child(2) {
-				width: calc(100% - 2 * var(--gutter));
+				width: calc(100% - 32px);
 			}
 		}
 	}
@@ -111,11 +107,11 @@
 	&__grid-contacts {
 		display: flex;
 		flex-flow: wrap;
-		margin: var(--gutter-negative);
+		margin: -16px;
 	}
 
 	&__cell-contacts {
-		padding: var(--gutter);
+		padding: 16px;
 		flex: none;
 
 		&:nth-child(1) {
@@ -137,6 +133,6 @@
 	&__objects {
 		position: relative;
 		z-index: 1;
-		margin-top: -20px;
+		margin-top: -24px;
 	}
 }

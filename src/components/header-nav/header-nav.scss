@@ -36,11 +36,11 @@
 
 	&__grid {
 		display: flex;
-		margin: 0 max-to-min(-20px, -10px);
+		margin: 0 max-to-min(-20px, -12px);
 	}
 
 	&__cell {
-		margin: 0 max-to-min(20px, 10px);
+		margin: 0 max-to-min(20px, 12px);
 		min-width: 0;
 	}
 
@@ -57,7 +57,7 @@
 		transition: color $duration-normal;
 
 		@include hover {
-			color: var(--color-flush-orange);
+			color: var(--color-primary);
 		}
 	}
 }

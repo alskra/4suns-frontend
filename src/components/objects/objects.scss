@@ -5,17 +5,17 @@
 	&__grid {
 		display: flex;
 		flex-flow: wrap;
-		margin: max-to-min(-15px, -7.5px) var(--gutter-negative);
+		margin: max-to-min(-16px, -8px) -16px;
 	}
 
 	&__item {
 		display: flex;
 		flex-flow: column;
-		margin: max-to-min(15px, 7.5px) var(--gutter);
+		margin: max-to-min(16px, 8px) 16px;
 		overflow: hidden;
 		border-radius: 8px;
 		flex: none;
-		width: calc(50% - 2 * var(--gutter));
+		width: calc(50% - 32px);
 		background: #FFFFFF;
 		box-shadow: 0 4px 8px rgba(#000000, 0.08);
 
@@ -59,7 +59,7 @@
 
 		td {
 			vertical-align: middle;
-			padding: 0 max-to-min(15px, 10px);
+			padding: 0 max-to-min(16px, 8px);
 
 			&:first-child {
 				padding-left: 0;

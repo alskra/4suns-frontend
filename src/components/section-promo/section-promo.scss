@@ -1,17 +1,23 @@
 .section-promo {
-	padding: var(--section_-_padding-y);
+	display: flex;
+	padding: max-to-min(64px, 32px) 0;
+	min-height: max-to-min(480px, 368px);
 	background: none no-repeat 50% / cover;
 
 	&__container {
 		@include container;
+		flex: 0 0 100%;
 	}
 
 	&__grid {
+		display: flex;
+		flex-flow: column;
 		max-width: 480px;
+		min-height: 100%;
 	}
 
 	&__title {
-		margin: 0 0 30px;
+		margin: 0 0 32px;
 		color: var(--color-white);
 		font-weight: 400;
 		font-size: max-to-min(48px, 32px);
@@ -19,6 +25,7 @@
 	}
 
 	&__content {
+		margin-bottom: auto;
 		color: var(--color-white);
 		font-size: max-to-min(24px, 16px);
 		line-height: 1.25;
@@ -33,6 +40,6 @@
 	}
 
 	&__footer {
-		margin-top: max-to-min(100px, 50px);
+		margin-top: 32px;
 	}
 }

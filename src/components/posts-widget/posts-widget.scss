@@ -11,7 +11,7 @@
 	&__header {
 		display: flex;
 		align-items: flex-start;
-		margin-bottom: 20px;
+		margin-bottom: 24px;
 		min-height: 40px;
 	}
 
@@ -26,7 +26,7 @@
 	}
 
 	&__button-header {
-		margin-left: 30px;
+		margin-left: 32px;
 		flex: none;
 	}
 
@@ -40,7 +40,7 @@
 		text-decoration: none;
 
 		& + & {
-			margin-top: 15px;
+			margin-top: 16px;
 		}
 
 		@include hover {
@@ -64,7 +64,7 @@
 	}
 
 	&__footer {
-		margin-top: 30px;
+		margin-top: 32px;
 	}
 
 	&__link-more {

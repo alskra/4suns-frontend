@@ -5,18 +5,18 @@
 	&__grid {
 		display: flex;
 		flex-flow: wrap;
-		margin: max-to-min(-15px, -7.5px) var(--gutter-negative);
+		margin: max-to-min(-16px, -8px) -16px;
 	}
 
 	&__item {
 		display: flex;
 		flex-flow: column;
-		margin: max-to-min(15px, 7.5px) var(--gutter);
+		margin: max-to-min(16px, 8px) 16px;
 		border-radius: 8px;
 		padding: 24px;
-		flex: 1 1 290px;
+		flex: 1 1 296px;
 		min-width: 0;
-		min-height: max-to-min(240px, 190px);
+		min-height: max-to-min(240px, 192px);
 		overflow: hidden;
 		background: #FFFFFF;
 		box-shadow: 0 4px 8px rgba(#000000, 0.08);
