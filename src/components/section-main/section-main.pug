@@ -4,6 +4,9 @@ include ../time/time
 mixin section-main({breadcrumb, title} = {})
 	+b.SECTION.section-main&attributes(attributes)
 		+e.HEADER.header
+			if attributes.class && attributes.class.indexOf('--header-bg') !== -1
+				+e.header-bg
+
 			+e.container--header
 				if breadcrumb
 					+e.NAV.breadcrumb

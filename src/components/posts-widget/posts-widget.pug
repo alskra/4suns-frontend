@@ -1,3 +1,4 @@
+include ../time/time
 include ../button/button
 
 mixin posts-widget()
@@ -25,19 +26,23 @@ mixin posts-widget()
 
 		const faq = [
 			{
-				date: '# 12517&nbsp;/ 18.06.2015',
+				number: '12517',
+				date: '18.06.2015',
 				title: 'Какой порядок рассмотрения и исполнения заявок и обращений?'
 			},
 			{
-				date: '# 4575&nbsp;/ 10.11.2014',
+				number: '4575',
+				date: '10.11.2014',
 				title: 'Какими способами я могу оплачивать электроэнергию?'
 			},
 			{
-				date: '# 3787&nbsp;/ 11.10.2014',
+				number: '3787',
+				date: '11.10.2014',
 				title: 'Где я могу получить кадастровый паспорт?'
 			},
 			{
-				date: '# 3786&nbsp;/ 11.10.2014',
+				number: '3786',
+				date: '11.10.2014',
 				title: 'Вы будете проводить перепрограммирование, или этот вопрос решается с Мосэнергосбытом?'
 			}
 		];
@@ -53,11 +58,13 @@ mixin posts-widget()
 		+e.main
 			each item in isFaq ? faq : news
 				+e.A.item(href=jsv)
-					+e.DIV.item-date
-						| !{item.date}
+					+e.DIV.item-header
+						if isFaq
+							| # #{item.number}&nbsp;/&#32;
+							|
+						+time().item-date #{item.date}
 
-					+e.DIV.item-title
-						| !{item.title}
+					+e.DIV.item-title #{item.title}
 
 		+e.footer
 			+e.A.link-more(href=jsv)

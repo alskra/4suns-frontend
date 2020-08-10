@@ -1,5 +1,10 @@
+:root {
+	--time_-_color: #828282;
+	--time_-_font-size: #{max-to-min(16px, 14px)};
+}
+
 .time {
-	color: #A2ABB3;
-	font-size: max-to-min(16px, 14px);
+	color: var(--time_-_color);
+	font-size: var(--time_-_font-size);
 	line-height: 1.25;
 }
