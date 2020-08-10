@@ -1,8 +1,11 @@
 .slider-main {
+	$r: &;
+
+	--pagination_-_bottom: #{max-to-min(60px, 20px)};
+
 	&__item {
 		position: relative;
 		padding-top: calc(var(--header_-_height) + 30px);
-		//padding-bottom: max-to-min(130px, 60px);
 		padding-bottom: max-to-min(135px, 60px);
 		height: max-to-min(640px, 430px);
 	}
@@ -35,16 +38,120 @@
 	}
 
 	&__item-title {
-		margin-bottom: 5px;
+		margin: 0 0 5px;
+		font-weight: 400;
 		font-size: max-to-min(96px, 40px);
 		line-height: var(--line-height-heading);
 	}
 
 	&__item-content {
-		@include line-clamp(max-to-min(24px, 16px), 1.25, 3);
+		@include line-clamp(max-to-min(24px, 16px), 1.25, 5);
 
 		&:not(:last-child) {
 			margin-bottom: 5px;
+		}
+	}
+
+	&__navigation-box {
+		@media (max-width: $responsive-width-max - 0.02) and (min-width: $screen-md) {
+			position: absolute;
+			z-index: 2;
+			right: 0;
+			bottom: calc(var(--pagination_-_bottom) + 18px);
+			left: 0;
+			height: 0;
+		}
+
+		@media (max-width: $screen-sm-max) {
+			display: none;
+		}
+	}
+
+	&__navigation {
+		@media (max-width: $responsive-width-max - 0.02) and (min-width: $screen-md) {
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+
+	&__button {
+		border: 0;
+		padding: 0;
+		width: 18px;
+		height: 32px;
+		background: none;
+		color: var(--color-alabaster);
+		opacity: 0.32;
+
+		&.is-disabled {
+			opacity: 0.1;
+			pointer-events: none;
+		}
+
+		&--prev {
+		}
+
+		&--next {
+			#{$r}__button-icon {
+				transform: rotate(180deg);
+			}
+		}
+
+		@media (min-width: $responsive-width-max) {
+			--position-x: 24px;
+			position: absolute;
+			z-index: 1;
+			top: 50%;
+			transform: translateY(-50%);
+
+			&--prev {
+				left: var(--position-x);
+			}
+
+			&--next {
+				right: var(--position-x);
+			}
+		}
+
+		@media (max-width: $responsive-width-max - 0.02) and (min-width: $screen-md) {
+			&--next {
+				margin-left: 20px;
+			}
+		}
+	}
+
+	&__button-icon {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__pagination-box {
+		position: absolute;
+		z-index: 1;
+		right: 0;
+		bottom: var(--pagination_-_bottom);
+		left: 0;
+	}
+
+	&__pagination {
+		display: flex;
+		flex-flow: wrap;
+		margin: -4px;
+
+		@media (max-width: $responsive-width-max - 0.02) {
+			padding-right: 70px;
+		}
+	}
+
+	&__pagination-bullet {
+		margin: 4px;
+		width: 32px;
+		height: 4px;
+		background: #FFFFFF;
+
+		&:not(.is-active) {
+			opacity: 0.2;
 		}
 	}
 }
