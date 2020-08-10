@@ -3,6 +3,7 @@
 
 	--swiper-preloader-color: var(--color-primary);
 	--pagination_-_bottom: #{max-to-min(60px, 20px)};
+	background: #FFFFFF;
 
 	&__item {
 		position: relative;
@@ -39,10 +40,25 @@
 	}
 
 	&__item-title {
+		display: flex;
+		align-items: center;
 		margin: 0 0 5px;
 		font-weight: 400;
 		font-size: max-to-min(96px, 40px);
 		line-height: var(--line-height-heading);
+	}
+
+	&__item-title-logo {
+		//margin-top: calc((var(--line-height-heading) * 1em - 32px) / 2);
+		margin-right: 15px;
+		flex: none;
+		width: 32px;
+		height: 32px;
+		color: var(--color-primary);
+
+		@media (min-width: $screen-md) {
+			display: none;
+		}
 	}
 
 	&__item-content {

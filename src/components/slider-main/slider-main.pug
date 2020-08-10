@@ -34,7 +34,11 @@ mixin slider-main()
 							+e.container
 								+e.item-main
 									+e.item-content !{item.pretitle}
-									+e.H1.item-title !{item.title}
+
+									+e.H1.item-title
+										+svg('logo').item-title-logo
+										+e.item-title-content !{item.title}
+
 									+e.item-content !{item.content}
 
 						if index > 0
