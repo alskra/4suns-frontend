@@ -1,6 +1,7 @@
 .slider-main {
 	$r: &;
 
+	--swiper-preloader-color: var(--color-primary);
 	--pagination_-_bottom: #{max-to-min(60px, 20px)};
 
 	&__item {
@@ -53,6 +54,10 @@
 	}
 
 	&__navigation-box {
+		:not(.swiper-container-initialized) > & {
+			display: none;
+		}
+
 		@media (max-width: $responsive-width-max - 0.02) and (min-width: $screen-md) {
 			position: absolute;
 			z-index: 2;
@@ -132,6 +137,10 @@
 		right: 0;
 		bottom: var(--pagination_-_bottom);
 		left: 0;
+
+		:not(.swiper-container-initialized) > & {
+			display: none;
+		}
 	}
 
 	&__pagination {
@@ -149,6 +158,7 @@
 		width: 32px;
 		height: 4px;
 		background: #FFFFFF;
+		transition: opacity 0.3s;
 
 		&:not(.is-active) {
 			opacity: 0.2;

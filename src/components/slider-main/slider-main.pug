@@ -15,18 +15,30 @@ mixin slider-main()
 			}
 		];
 
-	+b.slider-main(data-controller='slider-main')&attributes(attributes)
+	+b.slider-main(
+		data-controller='slider-main'
+		data-slider-main-speed='300'
+		data-slider-main-autoplay-delay='5000'
+	)&attributes(attributes)
 		.swiper-container(data-target='slider-main.swiper')
 			.swiper-wrapper
-				each item in items
-					+e.item.swiper-slide
-						+e.IMG.item-image(src=item.image alt=item.title)
+				each item, index in items
+					+e.item.swiper-slide(data-target='slider-main.item')
+						+e.IMG.item-image(
+							class={'swiper-lazy': index > 0}
+							src=index > 0 ? null : item.image
+							data-src=index > 0 ? item.image : null
+							alt=item.title
+						)
 						+e.item-body
 							+e.container
 								+e.item-main
 									+e.item-content !{item.pretitle}
 									+e.H1.item-title !{item.title}
 									+e.item-content !{item.content}
+
+						if index > 0
+							.swiper-lazy-preloader
 
 			+e.navigation-box
 				+e.container
