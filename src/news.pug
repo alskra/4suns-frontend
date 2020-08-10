@@ -1,5 +1,6 @@
 extends index
 include components/section-main/section-main
+include components/news/news
 
 append vars
 	-
@@ -9,4 +10,5 @@ block main
 	+section-main({
 		title: 'Новости',
 	}).--header-bg
-
+		+e.container
+			+news()

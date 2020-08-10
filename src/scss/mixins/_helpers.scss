@@ -96,6 +96,12 @@
 	-webkit-line-clamp: $lines-to-show;
 }
 
+@mixin line-clamp-short($lines-to-show) {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $lines-to-show;
+}
+
 @mixin container {
 	margin: 0 auto;
 	padding: 0 var(--gutter);
