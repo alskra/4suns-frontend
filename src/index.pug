@@ -1,6 +1,7 @@
 extends pug/base
 include components/header/header
 include components/footer/footer
+include components/content/content
 
 prepend vars
 	-
@@ -24,6 +25,41 @@ block content
 
 	main.app__main
 		block main
+			style.
+				.app__main {
+					margin-top: 32px;
+				}
+
+			-
+				const pages = [
+					{
+						title: 'Main',
+						url: 'main.html'
+					},
+					{
+						title: 'News',
+						url: 'news.html'
+					},
+					{
+						title: 'Article',
+						url: 'article.html'
+					},
+					{
+						title: 'FAQ',
+						url: 'faq.html'
+					}
+				];
+
+			.container
+				+content()
+					h1 Pages list
+
+					ol
+						each page in pages
+							li: a(href=`${baseDir}${page.url}`) #{page.title}
+
+			div &nbsp;
+			div &nbsp;
 
 	+footer().app__footer
 

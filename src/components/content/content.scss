@@ -2,10 +2,10 @@
 	--content_-_color: var(--color-default);
 	--content_-_font-size: 16px;
 	--content_-_line-height: 1.25;
-	--content_-_interval: calc(1em * var(--content_-_line-height));
 }
 
 .content {
+	--content_-_interval: calc(var(--content_-_font-size) * var(--content_-_line-height));
 	color: var(--content_-_color);
 	font-size: var(--content_-_font-size);
 	line-height: var(--content_-_line-height);
@@ -47,13 +47,19 @@
 		}
 	}
 
+	li {
+		&:not(:last-child) {
+			margin-bottom: 1em;
+		}
+	}
+
 	dt {
 		font-weight: 700;
 		font-size: 14px;
 	}
 
 	small {
-		font-size: 14 / 16 * 1em;
+		font-size: percentage(14 / 16);
 	}
 
 	a {
