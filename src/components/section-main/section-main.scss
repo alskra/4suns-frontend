@@ -1,6 +1,9 @@
 .section-main {
+	padding-bottom: max-to-min(60px, 30px);
+
 	&__header {
 		display: flex;
+		margin-bottom: 30px;
 		padding-top: calc(var(--header_-_height) + 30px);
 		padding-bottom: 30px;
 		min-height: 320px;
@@ -54,10 +57,14 @@
 	}
 
 	&__main {
-		padding: 30px 0;
+		//padding-top: 30px;
 	}
 
-	&__column {
+	&__column-content {
 		max-width: 864px;
+	}
+
+	&__footer {
+		margin-top: 30px;
 	}
 }
