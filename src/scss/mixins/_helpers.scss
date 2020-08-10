@@ -104,7 +104,7 @@
 
 @mixin container {
 	margin: 0 auto;
-	padding: 0 var(--gutter);
+	padding: 0 16px;
 	width: 100%;
 	max-width: var(--container-max-width);
 }

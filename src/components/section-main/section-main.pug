@@ -3,10 +3,6 @@ include ../time/time
 include ../button/button
 
 mixin section-main({breadcrumb, title} = {})
-	-
-		const isArticle = attributes.class && attributes.class.indexOf('--article') !== -1;
-		const isFaq = attributes.class && attributes.class.indexOf('--faq') !== -1;
-
 	+b.SECTION.section-main&attributes(attributes)
 		+e.HEADER.header
 			if attributes.class && attributes.class.indexOf('--header-bg') !== -1
@@ -21,25 +17,4 @@ mixin section-main({breadcrumb, title} = {})
 
 				+e.H1.title #{title}
 
-		+e.main
-			if isArticle
-				+e.container
-					+e.column-content
-						block
-			else if isFaq
-				+e.container
-					+e.intro-faq
-						+content().--smaller.__intro-faq-content
-							p.
-								В&nbsp;данном разделе&nbsp;Вы можете найти ответ на&nbsp;интересующий Вас вопрос
-								среди ранее размещенных или задать свой вопрос представителю Управляющей компании.
-
-						+button('a', 'chat').--primary.__intro-faq-button(href=jsv) Задать вопрос
-			else
-				block
-
-		if isArticle
-			+e.FOOTER.footer
-				+e.container
-					+e.column-content
-						+time() 22.04.2020
+		block

@@ -7,8 +7,7 @@ append vars
 		headerTransparent = true;
 
 block main
-	+section-main({
-		title: 'Новости',
-	}).--header-bg
-		+e.container
-			+news()
+	+section-main({title: 'Новости'}).--header-bg
+		+e.main
+			+e.container
+				+news()

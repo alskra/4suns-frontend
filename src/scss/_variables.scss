@@ -36,13 +36,11 @@ $responsive-width-max: 1680px;
 	--color-mine-shaft: #303030;
 	--color-emperor: #545454;
 	--color-flush-orange: #FF8200;
-	--color-flush-orange-1: #{lighten(#FF8200, 20)};
-	--color-flush-orange-2: #{saturate(#FF8200, 20)};
-	--color-flush-orange-3: #{darken(#FF8200, 40%)};
 	--color-mango-tango: #{darken(#FF8200, 5)};
 	--color-tundora: #4A4A4A;
 	--color-alabaster: #F8F8F8;
 	--color-dusty-gray: #9B9B9B;
+	--color-gray: #828282;
 
 	--color-default: var(--color-tundora);
 	--color-title: var(--color-tundora);
@@ -54,9 +52,7 @@ $responsive-width-max: 1680px;
 	--line-height: 1.25;
 	--line-height-heading: 1.15;
 
-	--gutter: 16px;
-	--gutter-negative: calc(-1 * var(--gutter));
-	--container-max-width: calc(1424px + 2 * var(--gutter));
+	--container-max-width: 1456px;
 	--responsive-width: #{$responsive-width-max};
 
 	@media (max-width: $responsive-width-max) and (min-width: $responsive-width-min) {

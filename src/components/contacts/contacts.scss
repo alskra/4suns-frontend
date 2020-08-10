@@ -2,11 +2,11 @@
 	&__grid {
 		display: flex;
 		flex-flow: wrap;
-		margin: var(--gutter-negative);
+		margin: -16px;
 	}
 
 	&__cell {
-		padding: var(--gutter);
+		padding: 16px;
 		flex: none;
 
 		&:nth-child(1) {

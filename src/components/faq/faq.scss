@@ -1,0 +1,7 @@
+.faq {
+	&__faq-item {
+		& + & {
+			margin-top: 16px;
+		}
+	}
+}

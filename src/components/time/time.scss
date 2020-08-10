@@ -1,6 +1,6 @@
 :root {
-	--time_-_color: #828282;
-	--time_-_font-size: #{max-to-min(16px, 14px)};
+	--time_-_color: var(--color-gray);
+	--time_-_font-size: var(--content_-_font-size);
 }
 
 .time {

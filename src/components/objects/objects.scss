@@ -20,7 +20,7 @@
 		box-shadow: 0 4px 8px rgba(#000000, 0.08);
 
 		@media (max-width: $screen-sm-max) {
-			width: calc(100% - 2 * var(--gutter));
+			width: calc(100% - 32px);
 		}
 	}
 

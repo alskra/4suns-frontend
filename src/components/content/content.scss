@@ -88,7 +88,12 @@
 	}
 
 	&--article {
-		--content_-_font-size: #{max-to-min(24px, 18px)};
-		color: var(--color-mine-shaft);
+		--content_-_color: var(--color-mine-shaft);
+		--content_-_font-size: #{max-to-min(24px, 20px)};
+	}
+
+	&--faq {
+		--content_-_color: var(--color-emperor);
+		font-weight: 500;
 	}
 }

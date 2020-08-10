@@ -105,17 +105,30 @@
 
 	&__intro-faq {
 		display: flex;
+		margin-bottom: 24px;
+
+		@media (max-width: $screen-sm-max) {
+			flex-flow: wrap;
+		}
 	}
 
 	&__intro-faq-content {
 		margin-right: auto;
 		align-self: center;
-		flex: 1 1 auto;
+		flex: 0 1 100%;
 		max-width: 1048px;
+
+		@media (max-width: $screen-sm-max) {
+			margin-bottom: 16px;
+		}
 	}
 
 	&__intro-faq-button {
 		margin-left: 32px;
 		flex: none;
+
+		@media (max-width: $screen-sm-max) {
+			margin-left: 0;
+		}
 	}
 }

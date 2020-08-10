@@ -1,12 +1,22 @@
 extends index
 include components/section-main/section-main
+include components/faq/faq
 
 append vars
 	-
 		headerTransparent = true;
 
 block main
-	+section-main({
-		title: 'FAQ',
-	}).--header-bg.--faq
+	+section-main({title: 'FAQ'}).--header-bg.--faq
+		+e.main
+			+e.container
+				+e.intro-faq
+					+content().--smaller.__intro-faq-content
+						p.
+							В&nbsp;данном разделе&nbsp;Вы можете найти ответ на&nbsp;интересующий Вас вопрос
+							среди ранее размещенных или задать свой вопрос представителю Управляющей компании.
 
+					+button('a', 'chat').--primary.__intro-faq-button(href=jsv) Задать вопрос
+					//-+button(undefined, 'chat').--primary.__intro-faq-button(href=jsv) Задать вопрос
+
+				+faq()
