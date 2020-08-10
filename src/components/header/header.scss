@@ -22,8 +22,13 @@
 		--header_-_background-color: transparent;
 		--header_-_color: var(--color-alabaster);
 		--button--login_-_border-color: transparent;
+		--button--login_-_color: var(--header_-_color);
 
 		margin-bottom: calc(-1 * var(--header_-_height));
+
+		#{$r}__button-menu-line {
+			background: var(--header_-_color);
+		}
 	}
 
 	&__container {
@@ -70,7 +75,7 @@
 		margin-top: -1px;
 		width: 100%;
 		height: 2px;
-		background: var(--color-flush-orange);
+		background: var(--color-primary);
 		transition: transform, opacity;
 		transition-duration: $duration-normal;
 		pointer-events: none;
@@ -89,7 +94,7 @@
 		flex: none;
 		width: 40px;
 		height: 40px;
-		color: var(--color-flush-orange);
+		color: var(--color-primary);
 		text-decoration: none;
 
 		@media (max-width: $screen-md-max) {
@@ -152,7 +157,7 @@
 		width: 100%;
 		height: calc(100vh - var(--header_-_height));
 		overflow-y: auto;
-		background: var(--color-white);
+		background: #FFFFFF;
 
 		&.enter-active,
 		&.leave-active {

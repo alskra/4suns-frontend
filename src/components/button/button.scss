@@ -1,5 +1,6 @@
 :root {
 	--button--login_-_border-color: #DDDDDD;
+	--button--login_-_color: var(--color-primary);
 }
 
 .button {
@@ -30,8 +31,8 @@
 			border: 1px solid var(--button--login_-_border-color);
 			padding: 0 15px;
 			height: 40px;
-			background: var(--color-white);
-			color: var(--color-flush-orange);
+			background: #FFFFFF;
+			color: var(--color-primary);
 			font-weight: 500;
 			font-size: 16px;
 			line-height: 1.25;
@@ -46,15 +47,15 @@
 
 			@include hover {
 				border-color: transparent;
-				background: var(--color-flush-orange);
-				color: var(--color-white);
+				background: var(--color-primary);
+				color: #FFFFFF;
 			}
 		}
 
 		@media (max-width: $screen-md-max) {
 			width: 24px;
 			height: 24px;
-			color: var(--color-flush-orange);
+			color: var(--button--login_-_color);
 
 			#{$r}__icon {
 				width: 100%;
@@ -68,7 +69,7 @@
 		padding: 0 20px;
 		height: 40px;
 		background: var(--color-primary);
-		color: var(--color-white);
+		color: #FFFFFF;
 		font-weight: 500;
 		font-size: 16px;
 		line-height: 1.25;

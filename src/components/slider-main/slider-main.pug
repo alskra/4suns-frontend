@@ -1,5 +1,21 @@
 mixin slider-main()
+	-
+		const items = [
+			{
+				image: `${baseDir}images/content/slider-main/slide-1.jpg`,
+				pretitle: 'Управляющая компания',
+				title: 'Четыре солнца',
+				content: 'Поддерживаем работоспособность всех инженерных систем объектов недвижимости и&nbsp;предоставляем пользователям этих объектов различные услуги.'
+			}
+		];
+
 	+b.slider-main&attributes(attributes)
-		+e.item
-			+e.IMG.item-image(src=`${baseDir}images/content/slider-main/slide-1.jpg` alt='')
-			+e.item-body
+		each item in items
+			+e.item
+				+e.IMG.item-image(src=item.image alt=item.title)
+				+e.item-body
+					+e.container
+						+e.item-main
+							+e.item-content !{item.pretitle}
+							+e.item-title !{item.title}
+							+e.item-content !{item.content}
