@@ -44,10 +44,6 @@ mixin news()
 				date: '10.04.2020'
 			},
 			{
-				title: 'Общее собрание собственников помещений',
-				date: '09.04.2020'
-			},
-			{
 				title: 'Электронные услуги ЖКХ',
 				date: '08.04.2020'
 			}
@@ -56,9 +52,11 @@ mixin news()
 	+b.news&attributes(attributes)
 		+e.grid
 			each item in items
-				+e.A.item(href=jsv title=item.title)
+				+e.A.item(href=`${baseDir}article.html` title=item.title)
 					+e.H2.item-title #{item.title}
 					+time().__item-date #{item.date}
 
-			// Spaces
+			// Static spaces
+			+e.item--space
+			+e.item--space
 			+e.item--space

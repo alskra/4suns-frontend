@@ -5,13 +5,13 @@
 	&__grid {
 		display: flex;
 		flex-flow: wrap;
-		margin: var(--gutter-negative);
+		margin: max-to-min(-15px, -7.5px) var(--gutter-negative);
 	}
 
 	&__item {
 		display: flex;
 		flex-flow: column;
-		margin: var(--gutter);
+		margin: max-to-min(15px, 7.5px) var(--gutter);
 		border-radius: 8px;
 		padding: 24px;
 		flex: 1 1 290px;

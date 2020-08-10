@@ -119,6 +119,10 @@
 		color: var(--color-alabaster);
 		opacity: 0.32;
 
+		@include hover {
+			opacity: 1;
+		}
+
 		&.is-disabled {
 			opacity: 0.1;
 			pointer-events: none;

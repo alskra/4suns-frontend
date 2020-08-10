@@ -103,4 +103,20 @@
 	&__footer {
 		margin-top: 30px;
 	}
+
+	&__intro-faq {
+		display: flex;
+	}
+
+	&__intro-faq-content {
+		margin-right: auto;
+		align-self: center;
+		flex: 1 1 auto;
+		max-width: 1050px;
+	}
+
+	&__intro-faq-button {
+		margin-left: calc(2 * var(--gutter));
+		flex: none;
+	}
 }

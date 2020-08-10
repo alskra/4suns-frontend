@@ -5,12 +5,12 @@
 	&__grid {
 		display: flex;
 		flex-flow: wrap;
-		margin: var(--gutter-negative);
+		margin: max-to-min(-15px, -7.5px) var(--gutter-negative);
 	}
 
 	&__item {
 		position: relative;
-		margin: var(--gutter);
+		margin: max-to-min(15px, 7.5px) var(--gutter);
 		overflow: hidden;
 		border-radius: 16px;
 		flex: 1 1 290px;

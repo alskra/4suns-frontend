@@ -1,0 +1,12 @@
+extends index
+include components/section-main/section-main
+
+append vars
+	-
+		headerTransparent = true;
+
+block main
+	+section-main({
+		title: 'FAQ',
+	}).--header-bg.--faq
+
