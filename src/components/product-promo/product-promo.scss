@@ -2,7 +2,7 @@
 	display: flex;
 	padding-top: calc(var(--header_-_height) + #{max-to-min(64px, 32px)});
 	padding-bottom: max-to-min(64px, 32px);
-	min-height: 100vh;
+	min-height: max-to-min(640px, 568px);
 	background: none no-repeat 50% / cover;
 
 	&__container {

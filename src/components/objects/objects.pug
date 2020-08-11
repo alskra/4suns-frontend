@@ -26,7 +26,7 @@ mixin objects()
 	+b.objects&attributes(attributes)
 		+e.grid
 			each item in items
-				+e.item
+				+e.ARTICLE.item
 					+e.item-image-box
 						+e.IMG.item-image(src=item.image alt=item.title)
 

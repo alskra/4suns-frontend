@@ -13,8 +13,8 @@
 		flex-flow: column;
 		margin: max-to-min(16px, 8px) 16px;
 		border-radius: 8px;
-		padding: 24px;
-		flex: 1 1 296px;
+		padding: 24px 24px 20px;
+		flex: 1 1 288px;
 		min-width: 0;
 		min-height: max-to-min(240px, 192px);
 		overflow: hidden;
@@ -42,12 +42,12 @@
 
 	&__item-title {
 		margin: 0 0 auto;
-		max-height: calc(var(--line-height-heading) * 1em * 5);
+		max-height: calc(var(--line-height-heading) * 1em * 4);
 		overflow: hidden;
 		font-weight: 500;
 		font-size: 24px;
 		line-height: var(--line-height-heading);
-		@include line-clamp-short(5);
+		@include line-clamp-short(4);
 	}
 
 	&__item-date {
