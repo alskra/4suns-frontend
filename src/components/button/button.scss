@@ -89,4 +89,10 @@
 			background: var(--color-primary-hover);
 		}
 	}
+
+	&--larger {
+		padding: 0 40px;
+		height: 64px;
+		font-size: 24px;
+	}
 }

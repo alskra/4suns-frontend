@@ -1,5 +1,6 @@
 extends index
 include components/section-main/section-main
+include components/button/button
 include components/faq/faq
 
 append vars
@@ -16,7 +17,7 @@ block main
 							В&nbsp;данном разделе&nbsp;Вы можете найти ответ на&nbsp;интересующий Вас вопрос
 							среди ранее размещенных или задать свой вопрос представителю Управляющей компании.
 
-					+button('a', 'chat').--primary.__intro-faq-button(href=jsv) Задать вопрос
+					+button({tag: 'a', icon: 'chat'}).--primary.__intro-faq-button(href=jsv) Задать вопрос
 					//-+button(undefined, 'chat').--primary.__intro-faq-button(href=jsv) Задать вопрос
 
 				+faq()

@@ -12,7 +12,6 @@
 	$r: &;
 
 	--header-nav_-_color: var(--header_-_color);
-
 	position: relative;
 	z-index: 100;
 	height: var(--header_-_height);
@@ -23,8 +22,6 @@
 		--header_-_color: var(--color-alabaster);
 		--button--login_-_border-color: transparent;
 		--button--login_-_color: var(--header_-_color);
-
-		//margin-bottom: calc(-1 * var(--header_-_height));
 
 		#{$r}__button-menu-line {
 			background: var(--header_-_color);

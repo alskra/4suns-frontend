@@ -1,0 +1,13 @@
+extends index
+include components/section-product/section-product
+include components/product-promo/product-promo
+
+append vars
+	-
+		headerTransparent = true;
+
+block main
+	+section-product()
+		+product-promo({tag: 'header'})
+
+

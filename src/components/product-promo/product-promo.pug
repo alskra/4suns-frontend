@@ -1,0 +1,16 @@
+include ../button/button
+
+mixin product-promo({tag = 'section'} = {})
+	+b({tag}).product-promo(
+		style={'background-image': `url(${baseDir}images/content/comelit.jpg)`}
+	)&attributes(attributes)
+		+e.container
+			+e.body
+				+e({tag: tag === 'section' ? 'h2' : 'h1'}).title Comelit. Сделайте свой дом по-настоящему умным
+
+				+e.content
+					p В&nbsp;вашем доме установлена система Comelit, включающая домофон, видеонаблюдение, сигнализацию и&nbsp;умный дом. Управляйте светом, климатом, шторами или другими устройствами и&nbsp;механизмами. С&nbsp;помощью мониторов, мультивыключателей, планшетов и&nbsp;смартфонов. Находясь дома, на&nbsp;работе, даче или в&nbsp;отпуске.
+					p: a(href=jsv) Скачать презентацию &darr;
+
+				+e.footer
+					+button({tag: 'a'}).--primary.--larger.__button(href=jsv) Смотреть видео

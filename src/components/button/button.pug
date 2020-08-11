@@ -1,5 +1,5 @@
-mixin button(tag = 'button', icon)
-	+b({tag}).button(role=tag === 'a' ? 'button' : null)&attributes(attributes)
+mixin button({tag = 'button', icon})
+	+b({tag}).button(role=tag !== 'button' ? 'button' : null)&attributes(attributes)
 		if icon
 			+svg(icon).icon(class=`--${icon}`)
 

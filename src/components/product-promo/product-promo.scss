@@ -1,0 +1,59 @@
+.product-promo {
+	display: flex;
+	padding-top: calc(var(--header_-_height) + #{max-to-min(64px, 32px)});
+	padding-bottom: max-to-min(64px, 32px);
+	min-height: 100vh;
+	background: none no-repeat 50% / cover;
+
+	&__container {
+		@include container;
+		display: flex;
+		flex-flow: column;
+		flex: 0 0 100%;
+	}
+
+	&__body {
+		margin-top: auto;
+		max-width: 640px;
+		color: #FFFFFF;
+	}
+
+	&__title {
+		margin: 0 0 24px;
+		font-weight: 400;
+		font-size: max-to-min(48px, 32px);
+		line-height: var(--line-height-heading);
+	}
+
+	&__content {
+		font-size: 16px;
+		line-height: 1.25;
+
+		p {
+			margin: 0;
+
+			&:not(:last-child) {
+				margin-bottom: 1em;
+			}
+		}
+
+		a {
+			color: var(--color-primary);
+			text-decoration: none;
+			transition: color $duration-normal;
+
+			@include hover {
+				color: var(--color-primary-hover);
+			}
+		}
+	}
+
+	&__footer {
+		margin-top: 32px;
+	}
+
+	&__button {
+		width: 280px;
+		max-width: 100%;
+	}
+}

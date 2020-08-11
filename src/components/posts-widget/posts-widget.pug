@@ -52,7 +52,7 @@ mixin posts-widget()
 			+e.H3.title= isFaq ? 'FAQ' : 'Новости'
 
 			if isFaq
-				+button('a', 'chat').--primary.__button-header(href=jsv)
+				+button({tag: 'a', icon: 'chat'}).--primary.__button-header(href=jsv)
 					| Задать вопрос
 
 		+e.main

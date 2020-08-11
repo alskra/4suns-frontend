@@ -28,7 +28,7 @@ mixin header()
 			+e.A.phone(href='tel:+74952300130')
 				| +7 (495) 230&mdash;01&mdash;30
 
-			+button('a', 'user').--login.__button-login(href=jsv)
+			+button({tag: 'a', icon: 'user'}).--login.__button-login(href=jsv)
 				| Личный кабинет
 
 		+e.menu-mobile(hidden data-target='header.menuMobile')
