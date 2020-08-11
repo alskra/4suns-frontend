@@ -1,0 +1,46 @@
+mixin slider-promo()
+	-
+		const items = [
+			{
+				image: 'images/content/slider-promo/mobile-app.jpg',
+				title: 'Мобильное приложение в&nbsp;подарок!',
+				content: 'При покупке любого комплекта, видеомонитор в&nbsp;квартире и&nbsp;вызывая панель в&nbsp;холле, мы&nbsp;дарим мобильное приложение стоимостью 9&nbsp;990&nbsp;рублей'
+			},
+			{
+				image: 'images/content/slider-promo/mobile-app.jpg',
+				title: 'Мобильное приложение в&nbsp;подарок!',
+				content: 'При покупке любого комплекта, видеомонитор в&nbsp;квартире и&nbsp;вызывая панель в&nbsp;холле, мы&nbsp;дарим мобильное приложение стоимостью 9&nbsp;990&nbsp;рублей'
+			},
+		];
+
+	+b.slider-promo(
+		data-controller='slider-promo'
+		data-slider-promo-speed='300'
+		data-slider-promo-autoplay-delay='7000'
+	)&attributes(attributes)
+		.swiper-container(data-target='slider-promo.swiper')
+			.swiper-wrapper
+				each item, index in items
+					+e.item.swiper-slide(data-target='slider-promo.item')
+						+e.container
+							+e.item-body
+								+e.item-image-box
+									+e.IMG.item-image(src=`${baseDir}${item.image}` alt=item.title)
+
+								+e.item-main
+									+e.item-title !{item.title}
+									+e.item-content !{item.content}
+
+			+e.navigation
+				+e.container--navigation
+					+e.BUTTON.button--prev(
+						type='button'
+						data-target='slider-promo.buttonPrev'
+					)
+						+svg('angle-left').button-icon
+
+					+e.BUTTON.button--next(
+						type='button'
+						data-target='slider-promo.buttonNext'
+					)
+						+svg('angle-left').button-icon
