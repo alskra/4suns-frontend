@@ -1,0 +1,85 @@
+mixin products(items)
+	-
+		items = items || [
+			{
+				image: 'images/content/products/maxi-vip-w.jpg',
+				title: 'Comelit MAXI VIP',
+				desc: 'IP-видеомонитор',
+				price: '41 990'
+			},
+			{
+				image: 'images/content/products/maxi-vip-w.jpg',
+				title: 'Лицензия Master на 1 абонента на мобильное приложение для iOS/Android (E-mail)',
+				desc: '',
+				price: '41 990'
+			},
+			{
+				image: 'images/content/products/maxi-vip-w.jpg',
+				title: 'Comelit MAXI VIP',
+				desc: 'IP-видеомонитор',
+				price: '41 990'
+			},
+			{
+				image: 'images/content/products/maxi-vip-w.jpg',
+				title: 'Comelit MAXI VIP',
+				desc: 'IP-видеомонитор',
+				price: '41 990'
+			},
+			{
+				image: 'images/content/products/maxi-vip-w.jpg',
+				title: 'Comelit MAXI VIP',
+				desc: 'IP-видеомонитор',
+				price: '41 990'
+			},
+			{
+				image: 'images/content/products/maxi-vip-w.jpg',
+				title: 'Comelit MAXI VIP',
+				desc: 'IP-видеомонитор',
+				price: '41 990'
+			},
+			{
+				image: 'images/content/products/maxi-vip-w.jpg',
+				title: 'Comelit MAXI VIP',
+				desc: 'IP-видеомонитор',
+				price: '41 990'
+			},
+			{
+				image: 'images/content/products/maxi-vip-w.jpg',
+				title: 'Comelit MAXI VIP',
+				desc: 'IP-видеомонитор',
+				price: '41 990'
+			},
+			{
+				image: 'images/content/products/maxi-vip-w.jpg',
+				title: 'Comelit MAXI VIP',
+				desc: 'IP-видеомонитор',
+				price: '41 990'
+			},
+			{
+				image: 'images/content/products/maxi-vip-w.jpg',
+				title: 'Comelit MAXI VIP',
+				desc: 'IP-видеомонитор',
+				price: '41 990'
+			}
+		];
+
+	+b.products&attributes(attributes)
+		+e.grid
+			each item in items
+				+e.A.item(href=jsv title=item.title)
+					+e.DIV.item-image-box
+						+e.IMG.item-image(src=`${baseDir}${item.image}` alt=item.title)
+
+					+e.DIV.item-body
+						+e.item-main
+							+e.H3.item-title #{item.title}
+
+							if item.desc
+								+e.item-desc #{item.desc}
+
+						+e.item-price #{item.price}&nbsp;₽
+
+			// Static spaces
+			+e.item--space
+			+e.item--space
+			+e.item--space

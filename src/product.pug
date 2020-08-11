@@ -4,8 +4,10 @@ include components/product-promo/product-promo
 include components/nav-page/nav-page
 include components/section-product/section-product
 include components/content/content
-include components/content-message/content-message
+include components/content-info/content-info
 include components/content-spoiler/content-spoiler
+include components/products/products
+include components/price-list/price-list
 
 append vars
 	-
@@ -25,7 +27,7 @@ block main
 						в&nbsp;жилом комплексе &laquo;Румянцево-Паркь&raquo;, Москва, Ленинградский проспект,
 						дом&nbsp;29, корпуса А, Б, В, Г.
 
-				+content-message().__content
+				+content-info().__content
 					p.
 						На&nbsp;объекте установлены РоЕ-коммутаторы, значит дополнительного питания абонентским
 						устройствам Comelit не&nbsp;требуется.
@@ -89,3 +91,103 @@ block main
 						Ниже приведена подробная инструкция по&nbsp;подключению абоненстких устройств Comelit,
 						в&nbsp;жилом комплексе &laquo;Румянцево-Паркь&raquo;, Москва, Ленинградский проспект,
 						дом&nbsp;29, корпуса А, Б, В, Г.
+
+				+products()
+
+		+section-product()#additionall
+			+e.container
+				+content().--max-768.__content
+					h2 Чем дополнить комплект?
+					p.
+						Вызывные панели для установки в&nbsp;приквартирном холле.
+
+				+products([
+					{
+						image: 'images/content/products/quadra-s.jpg',
+						title: 'Comelit MAXI VIP',
+						desc: 'IP-видеомонитор',
+						price: '41 990'
+					},
+					{
+						image: 'images/content/products/maxi-vip-w.jpg',
+						title: 'Comelit MAXI VIP',
+						desc: 'IP-видеомонитор',
+						price: '41 990'
+					},
+					{
+						image: 'images/content/products/maxi-vip-w.jpg',
+						title: 'Comelit MAXI VIP',
+						desc: 'IP-видеомонитор',
+						price: '41 990'
+					},
+					{
+						image: 'images/content/products/maxi-vip-w.jpg',
+						title: 'Comelit MAXI VIP',
+						desc: 'IP-видеомонитор',
+						price: '41 990'
+					},
+					{
+						image: 'images/content/products/maxi-vip-w.jpg',
+						title: 'Comelit MAXI VIP',
+						desc: 'IP-видеомонитор',
+						price: '41 990'
+					},
+					{
+						image: 'images/content/products/maxi-vip-w.jpg',
+						title: 'Comelit MAXI VIP',
+						desc: 'IP-видеомонитор',
+						price: '41 990'
+					},
+					{
+						image: 'images/content/products/maxi-vip-w.jpg',
+						title: 'Comelit MAXI VIP',
+						desc: 'IP-видеомонитор',
+						price: '41 990'
+					},
+					{
+						image: 'images/content/products/maxi-vip-w.jpg',
+						title: 'Comelit MAXI VIP',
+						desc: 'IP-видеомонитор',
+						price: '41 990'
+					}
+				])
+
+				+content().--max-768.__content
+					p.
+						Видеокамеры для установки в&nbsp;приквартирном холле. #[a(href=jsv) Всё&nbsp;видеонаблюдение&nbsp;→]
+
+				+products([
+					{
+						image: 'images/content/products/quadra-s.jpg',
+						title: 'Comelit MAXI VIP',
+						desc: 'IP-видеомонитор',
+						price: '41 990'
+					},
+					{
+						image: 'images/content/products/maxi-vip-w.jpg',
+						title: 'Comelit MAXI VIP',
+						desc: 'IP-видеомонитор',
+						price: '41 990'
+					},
+					{
+						image: 'images/content/products/maxi-vip-w.jpg',
+						title: 'Comelit MAXI VIP',
+						desc: 'IP-видеомонитор',
+						price: '41 990'
+					},
+					{
+						image: 'images/content/products/maxi-vip-w.jpg',
+						title: 'Comelit MAXI VIP',
+						desc: 'IP-видеомонитор',
+						price: '41 990'
+					}
+				])
+
+		+section-product().--white#cost
+			+e.container
+				+content().--max-768.__content
+					h2 Сколько стоит установка?
+					p.
+						Стоимость установки и&nbsp;подключения абонентских устройств.
+
+				+price-list()

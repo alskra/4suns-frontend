@@ -1,0 +1,51 @@
+.price-list {
+	display: flex;
+	flex-flow: column;
+
+	&__grid {
+		display: flex;
+		flex-flow: wrap;
+		margin: max-to-min(-16px, -8px) -16px;
+	}
+
+	&__item {
+		display: flex;
+		flex-flow: column;
+		margin: max-to-min(16px, 8px) 16px;
+		flex: 1 1 256px;
+		min-width: 0;
+
+		&--space {
+			margin-top: 0;
+			margin-bottom: 0;
+			height: 0;
+			visibility: hidden;
+		}
+	}
+
+	&__item-main {
+		margin-bottom: auto;
+	}
+
+	&__item-title {
+		margin: 0 0 4px;
+		color: var(--color-mine-shaft);
+		font-weight: 400;
+		font-size: 24px;
+		line-height: var(--line-height-heading);
+	}
+
+	&__item-desc {
+		color: var(--color-dusty-gray);
+		font-size: 12px;
+		line-height: 1.25;
+	}
+
+	&__item-price {
+		margin-top: 12px;
+		white-space: nowrap;
+		color: var(--color-default);
+		font-size: 32px;
+		line-height: 1.25;
+	}
+}

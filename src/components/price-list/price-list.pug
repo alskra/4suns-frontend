@@ -1,0 +1,45 @@
+mixin price-list()
+	-
+		const items = [
+			{
+				title: 'Аудиотрубка',
+				desc: 'Установка, подключение и&nbsp;настройка аудиотрубки без учета прокладки кабеля',
+				price: '2 500'
+			},
+			{
+				title: 'Вызывная панель',
+				desc: 'Установка, подключение и&nbsp;настройка вызывной панели без учета прокладки кабеля',
+				price: '3 500'
+			},
+			{
+				title: 'Видеомонитор',
+				desc: 'Установка, подключение и&nbsp;настройка видеомонитора без учета прокладки кабеля',
+				price: '3 500'
+			},
+			{
+				title: 'Дверной звонок',
+				desc: 'Установка, подключение и&nbsp;настройка дверного звонка без учета прокладки кабеля',
+				price: '1 000'
+			},
+			{
+				title: 'Видеокамера',
+				desc: 'Установка, подключение и&nbsp;настройка видеокамеры без учета прокладки кабеля',
+				price: '3 500'
+			},
+		];
+
+	+b.price-list&attributes(attributes)
+		+e.grid
+			each item in items
+				+e.item
+					+e.item-main
+						+e.item-title #{item.title}
+						+e.item-desc !{item.desc}
+
+					+e.item-price #{item.price} ₽
+
+			// Static spaces
+			+e.item--space
+			+e.item--space
+			+e.item--space
+			+e.item--space
