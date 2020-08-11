@@ -1,0 +1,6 @@
+include ../content/content
+
+mixin content-message()
+	+b.content-message&attributes(attributes)
+		+content().--smaller.__content
+			block

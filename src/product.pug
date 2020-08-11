@@ -1,13 +1,91 @@
 extends index
-include components/section-product/section-product
+include components/article-product/article-product
 include components/product-promo/product-promo
+include components/nav-page/nav-page
+include components/section-product/section-product
+include components/content/content
+include components/content-message/content-message
+include components/content-spoiler/content-spoiler
 
 append vars
 	-
 		headerTransparent = true;
 
 block main
-	+section-product()
+	+article-product()
 		+product-promo({tag: 'header'})
+		+nav-page()
 
+		+section-product().--white#how-connect
+			+e.container
+				+content().--smaller.--max-768.__content
+					h2 Как подключить домофон?
+					p.
+						Ниже приведена подробная инструкция по&nbsp;подключению абоненстких устройств Comelit,
+						в&nbsp;жилом комплексе &laquo;Румянцево-Паркь&raquo;, Москва, Ленинградский проспект,
+						дом&nbsp;29, корпуса А, Б, В, Г.
 
+				+content-message().__content
+					p.
+						На&nbsp;объекте установлены РоЕ-коммутаторы, значит дополнительного питания абонентским
+						устройствам Comelit не&nbsp;требуется.
+					p.
+						В&nbsp;каждую квартиру проложен серый домофонный кабель UTPcat5e из&nbsp;слаботочного щита
+						в&nbsp;коридоре.
+					p.
+						Доступ к&nbsp;централизованной системе видеонаблюдения не&nbsp;предоставляется жильцам
+						из&nbsp;соображений безопасности. Однако можно устанавливать индивидуальные видеокамеры
+						в&nbsp;приквартирных холлах, просматривая изображение на&nbsp;видеомониторе
+						и&nbsp;в&nbsp;мобильном приложении Comelit.
+
+				+content-spoiler('Как подключить видеомонитор или аудиотрубку?').__content
+					p.
+						Для подключения видеомонитора в&nbsp;квартире и&nbsp;вызывной панели в&nbsp;приквартирном холле,
+						проложите домофонный кабель до&nbsp;слаботочного щита в&nbsp;квартире. Из&nbsp;квартирного
+						слаботочного щита до&nbsp;каждого устройства, проложите кабель UTPcat5e.
+					p.
+						На&nbsp;месте расположения домофона, установите стандартный подрозетник диаметром 60&nbsp;мм
+						или закладной короб под видеомонитор. В&nbsp;квартирном слаботочном щите предусмотрите место
+						для коммутатора 280&times;44&times;126&nbsp;мм и&nbsp;розетку 220В.
+
+				+content-spoiler('Как подключить вызывную панель перед дверью?').__content
+					p.
+						Для подключения видеомонитора в&nbsp;квартире и&nbsp;вызывной панели в&nbsp;приквартирном холле,
+						проложите домофонный кабель до&nbsp;слаботочного щита в&nbsp;квартире. Из&nbsp;квартирного
+						слаботочного щита до&nbsp;каждого устройства, проложите кабель UTPcat5e.
+					p.
+						На&nbsp;месте расположения домофона, установите стандартный подрозетник диаметром 60&nbsp;мм
+						или закладной короб под видеомонитор. В&nbsp;квартирном слаботочном щите предусмотрите место
+						для коммутатора 280&times;44&times;126&nbsp;мм и&nbsp;розетку 220В.
+
+				+content-spoiler('Как подключить видеомонитор и&nbsp;вызывную панель?').__content
+					img.center(src=`${baseDir}images/content/pic-1.jpg` alt='')
+					p.
+						Для подключения видеомонитора в&nbsp;квартире и&nbsp;вызывной панели в&nbsp;приквартирном холле,
+						проложите домофонный кабель до&nbsp;слаботочного щита в&nbsp;квартире. Из&nbsp;квартирного
+						слаботочного щита до&nbsp;каждого устройства, проложите кабель UTPcat5e.
+					p.
+						На&nbsp;месте расположения домофона, установите стандартный подрозетник диаметром 60&nbsp;мм
+						или закладной короб под видеомонитор. В&nbsp;квартирном слаботочном щите предусмотрите место
+						для коммутатора 280&times;44&times;126&nbsp;мм и&nbsp;розетку 220В.
+
+				+content-spoiler('Как подключить видеомонитор и видеокамеру?').__content
+					p Content...
+
+				+content-spoiler('Как подключить видеомонитор, вызывную панель и видеокамеру?').__content
+					p Content...
+
+				+content-spoiler('Как подключить дверной звонок?').__content
+					p Content...
+
+				+content-spoiler('Как подключить мобильное приложение?').__content
+					p Content...
+
+		+section-product()#how-select
+			+e.container
+				+content().--max-768.__content
+					h2 Какой домофон выбрать?
+					p.
+						Ниже приведена подробная инструкция по&nbsp;подключению абоненстких устройств Comelit,
+						в&nbsp;жилом комплексе &laquo;Румянцево-Паркь&raquo;, Москва, Ленинградский проспект,
+						дом&nbsp;29, корпуса А, Б, В, Г.

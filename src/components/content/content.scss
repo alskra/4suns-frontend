@@ -2,10 +2,13 @@
 	--content_-_color: var(--color-default);
 	--content_-_font-size: 16px;
 	--content_-_line-height: 1.25;
+	--content_-_max-width: none;
+	--content-heading_-_line-height: var(--line-height-heading);
 }
 
 .content {
 	--content_-_interval: calc(var(--content_-_font-size) * var(--content_-_line-height));
+	max-width: var(--content_-_max-width);
 	color: var(--content_-_color);
 	font-size: var(--content_-_font-size);
 	line-height: var(--content_-_line-height);
@@ -24,10 +27,21 @@
 	h5,
 	h6 {
 		margin: 0;
+		line-height: var(--content-heading_-_line-height);
 
 		&:not(:last-child) {
 			margin-bottom: var(--content_-_interval);
 		}
+	}
+
+	h1,
+	h2,
+	h3 {
+		font-weight: 400;
+	}
+
+	h2 {
+		font-size: 48px;
 	}
 
 	h3 {
@@ -72,6 +86,25 @@
 		}
 	}
 
+	img {
+		vertical-align: middle;
+		max-width: 100%;
+
+		&.center {
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+
+			&:not(:first-child) {
+				margin-top: var(--content_-_interval);
+			}
+
+			&:not(:last-child) {
+				margin-bottom: var(--content_-_interval);
+			}
+		}
+	}
+
 	.medium {
 		font-weight: 500;
 	}
@@ -101,5 +134,9 @@
 	&--faq {
 		--content_-_color: var(--color-emperor);
 		font-weight: 500;
+	}
+
+	&--max-768 {
+		--content_-_max-width: 768px;
 	}
 }

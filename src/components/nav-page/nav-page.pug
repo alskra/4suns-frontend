@@ -1,2 +1,37 @@
 mixin nav-page()
+	-
+		const items = [
+			{
+				title: 'Как подключить домофон?',
+				desc: 'Инструкция по&nbsp;подключению абонентских устройств Comelit',
+				url: '#how-connect',
+			},
+			{
+				title: 'Какой домофон выбрать?',
+				desc: 'Видеомониторы, аудиотрубки и&nbsp;мобильное приложение для установки в&nbsp;квартире',
+				url: '#how-select',
+			},
+			{
+				title: 'Чем дополнить комплект?',
+				desc: 'Вызывные панели и&nbsp;видеокамеры для установки в&nbsp;приквартирном холле',
+				url: '#additionally',
+			},
+			{
+				title: 'Сколько стоит установка?',
+				desc: 'Стоимость установки и&nbsp;подключения абонентских устройств',
+				url: '#cost',
+			}
+		];
+
 	+b.NAV.nav-page&attributes(attributes)
+		+e.container
+			+e.grid
+				each item in items
+					+e.A.item(href=item.url)
+						+e.DIV.item-title #{item.title}
+						+e.DIV.item-desc !{item.desc}
+
+				// Static spaces
+				+e.item--space
+				+e.item--space
+				+e.item--space

@@ -1,0 +1,32 @@
+.content-spoiler {
+	&__header {
+		display: flex;
+		align-items: flex-start;
+		cursor: pointer;
+	}
+
+	&__title {
+		margin: auto 0;
+		flex: 1 1 auto;
+		color: var(--color-mine-shaft);
+		font-weight: 400;
+		font-size: 24px;
+		line-height: var(--line-height-heading);
+	}
+
+	&__icon {
+		margin-top: 1.5px;
+		flex: none;
+		width: 24px;
+		height: 24px;
+		color: var(--color-primary);
+	}
+
+	&__main {
+		overflow: hidden;
+	}
+
+	&__content {
+		margin-top: 24px;
+	}
+}

@@ -1,3 +1,22 @@
 .section-product {
+	padding: max-to-min(64px , 32px) 0;
+	background: var(--color-alabaster);
 
+	&--white {
+		background: #FFFFFF;
+	}
+
+	&__container {
+		@include container;
+	}
+
+	&__content {
+		&:not(:first-child) {
+			margin-top: 32px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 32px;
+		}
+	}
 }

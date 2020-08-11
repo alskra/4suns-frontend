@@ -1,0 +1,14 @@
+include ../content/content
+
+mixin content-spoiler(title)
+	+b.content-spoiler(
+		data-controller='content-spoiler'
+		data-content-spoiler-opened='false'
+	)&attributes(attributes)
+		+e.header(tabindex='0' data-action='click->content-spoiler#toggle')
+			+e.H3.title !{title}
+			+svg('plus').icon
+
+		+e.main(hidden data-target='content-spoiler.main')
+			+content().__content
+				block
