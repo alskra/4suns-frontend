@@ -49,11 +49,15 @@ block content
 					{
 						title: 'FAQ',
 						url: 'faq.html'
-					}
-					,
+					},
 					{
 						title: 'Product',
 						url: 'product.html'
+					},
+					{
+						title: 'Form Question',
+						url: '#question',
+						attrs: {'data-modal-show': ''}
 					}
 				];
 
@@ -63,14 +67,14 @@ block content
 
 					ol
 						each page in pages
-							li: a(href=`${baseDir}${page.url}`) #{page.title}
+							li: a(href=`${baseDir}${page.url}`)&attributes(page.attrs || null) #{page.title}
 
 			div &nbsp;
 			div &nbsp;
 
 	+footer().app__footer
 
-	+modal({title: 'Задать вопрос'})
+	+modal({title: 'Задать вопрос'})#question
 		+form-question()
 
 prepend scripts

@@ -65,6 +65,10 @@ mixin faq()
 			}
 		];
 
-	+b.faq&attributes(attributes)
-		each item in items
-			+faq-item(item).__faq-item
+	+b.faq(
+		data-controller='loader'
+		data-loader-url=`${baseDir}data/ajax/faq.html`
+	)&attributes(attributes)
+		+e.container
+			each item in items
+				+faq-item(item).__faq-item(data-target='loader.item')

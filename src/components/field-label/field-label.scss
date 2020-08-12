@@ -1,0 +1,15 @@
+.field-label {
+	&__label {
+		display: inline-block;
+		vertical-align: top;
+		margin-bottom: 8px;
+		max-width: 100%;
+		color: #5E5E5E;
+		font-size: 14px;
+		line-height: 1.25;
+	}
+
+	&__field {
+		width: 100%;
+	}
+}

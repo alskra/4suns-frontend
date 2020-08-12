@@ -1,4 +1,8 @@
 .faq {
+	&__container {
+		@include container;
+	}
+
 	&__faq-item {
 		& + & {
 			margin-top: 16px;

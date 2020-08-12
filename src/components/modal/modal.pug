@@ -1,10 +1,14 @@
 mixin modal({title} = {})
-	+b.modal&attributes(attributes)
+	+b.modal(
+		hidden
+		data-controller='modal'
+		data-modal-shown='false'
+	)&attributes(attributes)
 		+e.overlay
 
 		+e.frame
 			+e.body
-				+e.BUTTON.button-close(type='button') Закрыть
+				+e.BUTTON.button-close(type='button' data-action='modal#hide') Закрыть
 
 				+e.header
 					+e.title #{title}

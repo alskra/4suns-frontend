@@ -2,6 +2,10 @@
 	display: flex;
 	flex-flow: column;
 
+	&__container {
+		@include container;
+	}
+
 	&__grid {
 		display: flex;
 		flex-flow: wrap;

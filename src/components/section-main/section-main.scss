@@ -104,8 +104,11 @@
 	}
 
 	&__intro-faq {
-		display: flex;
 		margin-bottom: 24px;
+	}
+
+	&__intro-faq-grid {
+		display: flex;
 
 		@media (max-width: $screen-sm-max) {
 			flex-flow: wrap;

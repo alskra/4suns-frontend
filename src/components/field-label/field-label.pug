@@ -1,2 +1,12 @@
-mixin field-label({label} = {})
-	+b({tag}).field&attributes(attributes)
+include ../field/field
+
+mixin field-label({tag, label} = {})
+	-
+		attributes.class = attributes.class + ' __field';
+
+	+b.LABEL.field-label
+		if label
+			+e.label !{label}
+
+		+field({tag})&attributes(attributes)
+			block

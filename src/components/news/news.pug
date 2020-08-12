@@ -46,17 +46,29 @@ mixin news()
 			{
 				title: 'Электронные услуги ЖКХ',
 				date: '08.04.2020'
-			}
+			},
+			{
+				title: 'Общее собрание собственников помещений',
+				date: '10.04.2020'
+			},
 		];
 
-	+b.news&attributes(attributes)
-		+e.grid
-			each item in items
-				+e.A.item(href=`${baseDir}article.html` title=item.title)
-					+e.H2.item-title #{item.title}
-					+time().__item-date #{item.date}
+	+b.news(
+		data-controller='loader'
+		data-loader-url=`${baseDir}data/ajax/news.html`
+	)&attributes(attributes)
+		+e.container
+			+e.grid
+				each item in items
+					+e.A.item(
+						href=`${baseDir}article.html`
+						title=item.title
+						data-target='loader.item'
+					)
+						+e.H2.item-title #{item.title}
+						+time().__item-date #{item.date}
 
-			// Static spaces
-			+e.item--space
-			+e.item--space
-			+e.item--space
+				// Static spaces
+				+e.item--space
+				+e.item--space
+				+e.item--space
