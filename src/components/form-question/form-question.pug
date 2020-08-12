@@ -1,0 +1,26 @@
+include ../field/field
+
+mixin form-question()
+	+b.FORM.form-question&attributes(attributes)
+		+e.grid
+			+e.cell
+				+field().__field(type='text')
+
+			+e.cell
+				+field().__field(type='email')
+
+			+e.cell
+				+field().__field(type='tel')
+
+			+e.cell
+				+field({tag: 'select'}).--select.__field
+					option(value='')
+					option(value='1') Street 1
+					option(value='2') Street 2
+					option(value='3') Street 3
+
+			+e.cell
+				+field().__field(type='text')
+
+			+e.cell
+				+field({tag: 'textarea'}).--area.__field

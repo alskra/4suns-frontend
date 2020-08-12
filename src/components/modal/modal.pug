@@ -1,0 +1,13 @@
+mixin modal({title} = {})
+	+b.modal&attributes(attributes)
+		+e.overlay
+
+		+e.frame
+			+e.body
+				+e.BUTTON.button-close(type='button') Закрыть
+
+				+e.header
+					+e.title #{title}
+
+				+e.main
+					block

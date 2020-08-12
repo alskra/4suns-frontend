@@ -2,6 +2,8 @@ extends pug/base
 include components/header/header
 include components/footer/footer
 include components/content/content
+include components/modal/modal
+include components/form-question/form-question
 
 prepend vars
 	-
@@ -67,6 +69,9 @@ block content
 			div &nbsp;
 
 	+footer().app__footer
+
+	+modal({title: 'Задать вопрос'})
+		+form-question()
 
 prepend scripts
 	script(

@@ -1,0 +1,38 @@
+.form-question {
+	display: flex;
+	flex-flow: column;
+
+	&__grid {
+		display: flex;
+		flex-flow: wrap;
+		align-items: flex-start;
+		margin: -8px -16px;
+	}
+
+	&__cell {
+		margin: 8px 16px;
+		min-width: 0;
+
+		&:nth-child(1),
+		&:nth-child(6) {
+			flex: 0 1 100%;
+		}
+
+		&:nth-child(2),
+		&:nth-child(3) {
+			flex: 0 0 calc(50% - 32px);
+		}
+
+		&:nth-child(4) {
+			flex: 0 0 calc(#{percentage((512 + 32) / (704 + 32))} - 32px);
+		}
+
+		&:nth-child(5) {
+			flex: 1 0 0;
+		}
+	}
+
+	&__field {
+		width: 100%;
+	}
+}
