@@ -1,7 +1,3 @@
-:root {
-	--header-nav_-_color: var(--color-tundora);
-}
-
 .header-nav {
 	$r: &;
 
@@ -49,7 +45,7 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
-		color: var(--header-nav_-_color);
+		color: var(--header-nav_-_color-custom, var(--color-tundora));
 		font-weight: 500;
 		font-size: 16px;
 		line-height: 1.25;

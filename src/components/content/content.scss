@@ -1,12 +1,9 @@
-:root {
-	--content_-_color: var(--color-default);
-	--content_-_font-size: 16px;
-	--content_-_line-height: 1.25;
-	--content_-_max-width: none;
-	--content-heading_-_line-height: var(--line-height-heading);
-}
-
 .content {
+	--content_-_color: var(--content_-_color-custom, var(--color-default));
+	--content_-_font-size: var(--content_-_font-size-custom, 16px);
+	--content_-_line-height: var(--content_-_line-height-custom, 1.25);
+	--content-heading_-_line-height: var(--content-heading_-_line-height-custom, var(--line-height-heading));
+	--content_-_max-width: var(--content_-_max-width-custom, none);
 	--content_-_interval: calc(var(--content_-_font-size) * var(--content_-_line-height));
 	max-width: var(--content_-_max-width);
 	color: var(--content_-_color);
@@ -46,7 +43,7 @@
 
 	h3 {
 		font-weight: 500;
-		font-size: 18px;
+		font-size: 24px;
 	}
 
 	p,
@@ -63,7 +60,7 @@
 
 	li {
 		&:not(:last-child) {
-			margin-bottom: 1em;
+			margin-bottom: var(--content_-_font-size);
 		}
 	}
 
@@ -119,24 +116,24 @@
 	}
 
 	&--larger {
-		--content_-_font-size: 18px;
+		--content_-_font-size: var(--content_-_font-size-custom, 18px);
 	}
 
 	&--smaller {
-		--content_-_font-size: 14px;
+		--content_-_font-size: var(--content_-_font-size-custom, 14px);
 	}
 
 	&--article {
-		--content_-_color: var(--color-mine-shaft);
-		--content_-_font-size: #{max-to-min(24px, 20px)};
+		--content_-_color: var(--content_-_color-custom, var(--color-mine-shaft));
+		--content_-_font-size: var(--content_-_font-size-custom, #{max-to-min(24px, 20px)});
 	}
 
 	&--faq {
-		--content_-_color: var(--color-emperor);
+		--content_-_color: var(--content_-_color-custom, var(--color-emperor));
 		font-weight: 500;
 	}
 
 	&--max-768 {
-		--content_-_max-width: 768px;
+		--content_-_max-width: var(--content_-_max-width-custom, 768px);
 	}
 }

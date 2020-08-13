@@ -1,8 +1,3 @@
-:root {
-	--button--login_-_border-color: #DDDDDD;
-	--button--login_-_color: var(--color-primary);
-}
-
 .button {
 	$r: &;
 
@@ -28,7 +23,7 @@
 	&--login {
 		@media (min-width: $screen-lg) {
 			border-radius: 8px;
-			border: 1px solid var(--button--login_-_border-color);
+			border: 1px solid var(--button_-_border-color-custom, #DDDDDD);
 			padding: 0 15px;
 			height: 40px;
 			background: #FFFFFF;
@@ -55,7 +50,7 @@
 		@media (max-width: $screen-md-max) {
 			width: 24px;
 			height: 24px;
-			color: var(--button--login_-_color);
+			color: var(--button_-_color-custom, var(--color-primary));
 
 			#{$r}__icon {
 				width: 100%;

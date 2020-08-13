@@ -1,6 +1,6 @@
 extends pug/base
 include components/header/header
-include components/footer/footer
+//-include components/footer/footer
 include components/content/content
 include components/modal/modal
 include components/form-question/form-question
@@ -72,7 +72,7 @@ block content
 			div &nbsp;
 			div &nbsp;
 
-	+footer().app__footer
+	//-+footer().app__footer
 
 	+modal({title: 'Задать вопрос'})#question
 		+form-question()

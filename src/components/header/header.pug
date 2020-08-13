@@ -5,7 +5,7 @@ mixin header()
 	+b.HEADER.header(
 		data-controller='header'
 		data-header-menu-mobile-opened='false'
-		data-action='resize@window->header#checkViewport'
+		data-action='scroll@window->header#checkScroll resize@window->header#checkViewport'
 	)&attributes(attributes)
 		+e.container
 			+e.BUTTON.button-menu(

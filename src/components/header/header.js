@@ -13,21 +13,7 @@ export default class extends Controller {
 	}
 
 	connect() {
-		if (this.transparent) {
-			this.enableTransparent();
-		}
-	}
-
-	enableTransparent() {
-		this.element.classList.add('header--transparent');
-	}
-
-	disableTransparent() {
-		this.element.classList.remove('header--transparent');
-	}
-
-	toggleMenuMobile() {
-		this.menuMobileOpened = !this.menuMobileOpened;
+		this.render.transparent();
 	}
 
 	checkViewport() {
@@ -36,27 +22,36 @@ export default class extends Controller {
 		}
 	}
 
+	checkScroll() {
+		this.render.transparent();
+	}
+
+	toggleMenuMobile() {
+		this.menuMobileOpened = !this.menuMobileOpened;
+	}
+
 	get render() {
 		return {
+			transparent: () => {
+				if (this.transparent) {
+					if (window.pageYOffset > 0 || this.menuMobileOpened) {
+						this.element.classList.remove('header--transparent');
+					} else {
+						this.element.classList.add('header--transparent');
+					}
+				}
+			},
 			menuMobileOpened: () => {
+				this.render.transparent();
 				this.buttonMenuTarget.classList.toggle('is-opened', this.menuMobileOpened);
 				this.transitionShowMenuMobile(this.menuMobileOpened);
 
 				if (this.menuMobileOpened) {
-					window.scrollTo(0, 0);
 					disableBodyScroll(this.element, {
 						reserveScrollBarGap: true,
 					});
-
-					if (this.transparent) {
-						this.disableTransparent();
-					}
 				} else {
 					enableBodyScroll(this.element);
-
-					if (this.transparent) {
-						this.enableTransparent();
-					}
 				}
 			},
 		};

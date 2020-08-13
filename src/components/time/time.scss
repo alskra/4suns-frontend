@@ -1,10 +1,5 @@
-:root {
-	--time_-_color: var(--color-gray);
-	--time_-_font-size: var(--content_-_font-size);
-}
-
 .time {
-	color: var(--time_-_color);
-	font-size: var(--time_-_font-size);
+	color: var(--time_-_color-custom, var(--color-gray));
+	font-size: var(--time_-_font-size-custom, 16px);
 	line-height: 1.25;
 }

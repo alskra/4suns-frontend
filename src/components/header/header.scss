@@ -1,7 +1,5 @@
 :root {
 	--header_-_height: 72px;
-	--header_-_background-color: var(--color-white);
-	--header_-_color: var(--color-tundora);
 
 	@media (max-width: $screen-md-max) {
 		--header_-_height: 64px;
@@ -11,20 +9,27 @@
 .header {
 	$r: &;
 
-	--header-nav_-_color: var(--header_-_color);
-	position: relative;
+	--header_-_color: var(--color-tundora);
+	position: fixed;
 	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100%;
 	height: var(--header_-_height);
-	background: var(--header_-_background-color);
+	background: #FFFFFF;
+	transition: background-color $duration-normal;
 
 	&--transparent {
-		--header_-_background-color: transparent;
 		--header_-_color: var(--color-alabaster);
-		--button--login_-_border-color: transparent;
-		--button--login_-_color: var(--header_-_color);
+		background: transparent;
 
 		#{$r}__button-menu-line {
 			background: var(--header_-_color);
+		}
+
+		#{$r}__button-login {
+			--button_-_border-color-custom: transparent;
+			--button_-_color-custom: var(--header_-_color);
 		}
 	}
 
@@ -73,7 +78,7 @@
 		width: 100%;
 		height: 2px;
 		background: var(--color-primary);
-		transition: transform, opacity;
+		transition: background-color, opacity, transform;
 		transition-duration: $duration-normal;
 		pointer-events: none;
 
@@ -106,6 +111,7 @@
 	}
 
 	&__nav {
+		--header-nav_-_color-custom: var(--header_-_color);
 		margin-right: auto;
 		min-width: 0;
 	}
@@ -118,6 +124,7 @@
 		font-size: 12px;
 		line-height: 1;
 		text-align: right;
+		transition: color $duration-normal;
 
 		@media (max-width: $screen-xl-max) {
 			display: none;
@@ -133,6 +140,7 @@
 		font-size: max-to-min(20px, 16px);
 		line-height: 1.25;
 		text-decoration: none;
+		transition: color $duration-normal;
 
 		@media (max-width: $screen-md-max) {
 			margin: 0 auto;
@@ -149,7 +157,7 @@
 		display: flex;
 		flex-flow: column;
 		position: absolute;
-		top: var(--header_-_height);
+		top: 100%;
 		left: 0;
 		width: 100%;
 		height: calc(100vh - var(--header_-_height));
@@ -158,16 +166,16 @@
 
 		&.enter-active,
 		&.leave-active {
-			transition: opacity;
+			transition: opacity $duration-normal;
 		}
 
-		&.enter-active {
-			transition-duration: 0.3s;
-		}
-
-		&.leave-active {
-			transition-duration: 0.15s;
-		}
+		//&.enter-active {
+		//	transition-duration: 0.3s;
+		//}
+		//
+		//&.leave-active {
+		//	transition-duration: 0.15s;
+		//}
 
 		&.enter,
 		&.leave-to {
