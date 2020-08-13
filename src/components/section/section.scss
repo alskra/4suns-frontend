@@ -131,8 +131,10 @@
 	}
 
 	&__objects {
-		position: relative;
-		z-index: 1;
-		margin-top: -24px;
+		&--offset {
+			position: relative;
+			z-index: 1;
+			margin-top: -24px;
+		}
 	}
 }

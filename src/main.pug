@@ -23,9 +23,11 @@ block main
 			+services()
 
 	+section({title: 'Объекты'}).--objects
-		+map-objects()
+		if mapObjects
+			+map-objects()
+
 		+e.container
-			+objects().__objects
+			+objects().__objects(class={'--offset': mapObjects})
 
 	+section-promo()
 	+section().--about

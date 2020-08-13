@@ -2,25 +2,27 @@ mixin objects()
 	-
 		const items = [
 			{
-				image: `${baseDir}images/content/objects/nekrasovka.jpg`,
-				title: 'Некрасовка-Парк',
-				content: [
-					'25',
-					'П-44Т, П-44К, Д25Н1',
-					'360&nbsp;000&nbsp;м&sup2;',
-					'Более 6&nbsp;500'
-				]
-			},
-			{
 				image: `${baseDir}images/content/objects/rumyantsevo.jpg`,
 				title: 'Румянцево-Парк',
 				content: [
 					'3',
 					'Монолит',
 					'222&nbsp;000&nbsp;м&sup2;',
-					'Более 4&nbsp;200'
+					'Более 4&nbsp;200',
+					'г. Москва, ул. Родниковая, вл. 17Е'
 				]
-			}
+			},
+			{
+				image: `${baseDir}images/content/objects/nekrasovka.jpg`,
+				title: 'Некрасовка-Парк',
+				content: [
+					'25',
+					'П-44Т, П-44К, Д25Н1',
+					'360&nbsp;000&nbsp;м&sup2;',
+					'Более 6&nbsp;500',
+					'г. Москва, ЮВАО, район Некрасовка, м-н &laquo;Некрасовка-Парк&raquo;'
+				]
+			},
 		];
 
 	+b.objects&attributes(attributes)
@@ -47,3 +49,7 @@ mixin objects()
 							tr
 								td Счастливых семей
 								td !{item.content[3]}
+
+							tr
+								td Адрес
+								td !{item.content[4]}
