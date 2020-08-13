@@ -1,9 +1,9 @@
-.faq {
+.posts {
 	&__container {
 		@include container;
 	}
 
-	&__faq-item {
+	&__post-item {
 		& + & {
 			margin-top: 16px;
 		}

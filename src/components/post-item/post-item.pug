@@ -1,0 +1,20 @@
+include ../time/time
+include ../content/content
+
+mixin post-item({title, number, date, content}, isFaq)
+	+b.ARTICLE.post-item(
+		data-controller='post-item'
+		data-faq-item-opened='false'
+	)&attributes(attributes)
+		+e.HEADER.header(tabindex='0' data-action='click->post-item#toggle')
+			+e.H2.title #{title}
+
+			+e.info
+				if isFaq
+					| # #{number}&nbsp;/&#32;
+
+				+time() #{date}
+
+		+e.main(hidden data-target='post-item.main')
+			+e.main-inner
+				+content().--faq.__content !{content}

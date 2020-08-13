@@ -1,7 +1,7 @@
 extends index
 include components/section-main/section-main
 include components/button/button
-include components/faq/faq
+include components/posts/posts
 
 append vars
 	-
@@ -20,4 +20,4 @@ block main
 
 						+button({tag: 'a', icon: 'chat'}).--primary.__intro-faq-button(href='#question' data-modal-show='') Задать вопрос
 
-			+faq()
+			+posts(true)
