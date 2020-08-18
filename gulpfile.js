@@ -416,6 +416,7 @@ gulp.task('zip', () => {
 		'build/**',
 		'src/**',
 		'.babelrc',
+		'.browserslistrc',
 		'.editorconfig',
 		'.eslintignore',
 		'.eslintrc',
