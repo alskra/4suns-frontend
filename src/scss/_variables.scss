@@ -47,7 +47,9 @@ $responsive-width-max: 1680px;
 	--color-primary: var(--color-flush-orange);
 	--color-primary-hover: var(--color-mango-tango);
 
-	--font-family-jost: 'Jost', sans-serif;
+	//--font-family-jost: 'Jost', sans-serif;
+	--font-family-pt-sans-caption: 'PT Sans Caption', sans-serif;
+	--font-family-default: var(--font-family-pt-sans-caption);
 
 	--line-height: 1.25;
 	--line-height-heading: 1.15;

@@ -2,17 +2,17 @@
 	height: max-to-min(496px, 224px);
 
 	&__popup-container {
-		cursor: auto;
-		height: 0;
 		position: absolute;
 		width: 160px;
+		height: 0;
+		cursor: auto;
 	}
 
 	&__popup-anchor {
 		position: absolute;
-		width: 100%;
 		bottom: 8px;
 		left: 0;
+		width: 100%;
 
 		&::after {
 			content: '';
@@ -34,18 +34,17 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+		transform: translate(-50%, -100%);
 		overflow: hidden;
 		border-radius: 8px;
 		width: max-to-min(160px, 112px);
 		box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.5);
 		background: #FFFFFF;
-		font-family: var(--font-family-jost);
-		transform: translate(-50%, -100%);
+		font-family: var(--font-family-default);
 	}
 
 	&__popup-image-box {
 		overflow: hidden;
-		flex: none;
 		height: max-to-min(64px, 48px);
 	}
 
@@ -59,7 +58,7 @@
 	&__popup-body {
 		display: flex;
 		flex-flow: column;
-		padding: max-to-min(12px, 6px);
+		padding: max-to-min(12px, 8px);
 		min-height: max-to-min(48px, 32px);
 	}
 
